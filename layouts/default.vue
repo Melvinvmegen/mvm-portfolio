@@ -5,7 +5,7 @@
     v-main
       v-container
         nuxt
-    Footer(:socialLinks='socialLinks' :navItems="navItems")
+    Footer(:socialLinks='socialLinks')
 </template>
 
 <script>
