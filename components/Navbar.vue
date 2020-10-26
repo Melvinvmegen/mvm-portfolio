@@ -6,6 +6,7 @@
     .main-header-center.col-lg-6(v-if="this.$vuetify.breakpoint.mdAndUp") 
       v-list-item.nav-item(v-for="item in navItems" dark exact :key="item.name" :to="item.link")
         .primary--text {{ item.title }}
+        span.line.-bottom
     .main-header-center(v-else)
       v-app-bar-nav-icon(@click.stop="drawer= true")
 
@@ -92,70 +93,13 @@ aside .v-navigation-drawer__content {
 }
 
 .main-header-center .nav-item {
-  padding: 0 20px;
-  font-size: 15px;
   font-weight: 500;
   width: 100%;
   justify-content: center;
   display: flex;
   height: 100%;
   align-items: center;
-  border-radius: 4%;
-}
-
-.nav-item:hover {
-  background-color: #6876c5;
-}
-
-.nav-item .router-link-active {
-  background: #6876c5;
-}
-
-.router-link-active :after {
-  position: absolute;
-  content: "";
-  bottom: -6px;
-  left: calc(0.7em * 1.2);
-  right: calc(0.7em * 1.2);
-  height: 4px;
-  background: #f9423a;
-  transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s,
-    right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
-    left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
-}
-
-.router-link-active .line {
-  position: absolute;
-  background: #f9423a;
-  bottom: -6px;
-}
-
-.router-link-active .line.-bottom {
-  height: 3px;
-  left: -3px;
-  right: -3px;
-  transform: scale3d(0, 1, 1);
-}
-
-.router-link-active .line.-bottom {
-  bottom: -3px;
-  transform-origin: right;
-}
-
-.router-link-active :hover:after,
-.router-link-active :active:after {
-  transform: scale3d(0, 1, 1);
-  right: -3px;
-  left: -3px;
-  transform-origin: right;
-  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s,
-    right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
-}
-
-.router-link-active :hover .line.-bottom,
-.router-link-active :active .line.-bottom {
-  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
-  transform-origin: left;
+  font-size: 15px;
 }
 
 @media (max-width: 960px) {
