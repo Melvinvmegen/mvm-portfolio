@@ -5,25 +5,26 @@
     v-main
       v-container
         nuxt
-    v-footer()
-      span &copy; {{ new Date().getFullYear() }}
-
+    Footer(:socialLinks='socialLinks' :navItems="navItems")
 </template>
 
 <script>
 import NavBar from '~/components/Navbar'
+import Footer from '~/components/Footer'
 
 export default {
   components: {
-    NavBar
+    NavBar,
+    Footer
   },
   data () {
     return {
       navItems: [
-        { id: 1, title: 'Developpeur Front-end', href: 'Developpeur-Front-end' },
-        { id: 2, title: 'Back-end', href: 'Developpeur-Back-end' },
-        { id: 3, title: 'Marketeur Digital', href: 'Marketeur-Digital' },
-        { id: 4, title: 'Mes Projets', href: 'Mes-Projets' }
+        { id: 1, title: 'FRONT END', link: 'front-end' },
+        { id: 2, title: 'BACK END', link: 'back-end' },
+        { id: 3, title: 'MARKETING DIGITAL', link: 'marketeur-digital' },
+        { id: 4, title: 'PROJETS', link: 'projets' },
+        { id: 5, title: 'CONTACTS', link: 'contact' }
       ],
       socialLinks: [
         { id: 1, icon: 'mdi-linkedin', href: 'https://www.linkedin.com/in/melvin-van-megen/' },

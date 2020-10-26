@@ -1,11 +1,11 @@
 <template lang="pug">
-  v-app-bar(app='' fixed elevate-on-scroll height="100")
+  v-app-bar.white(app='' fixed elevate-on-scroll height="100")
     .d-flex.align-center.main-header-left
       nuxt-link(:to="{path: '/'}")
         Logo(color="defaultlogo")
     .main-header-center.col-lg-6(v-if="this.$vuetify.breakpoint.mdAndUp") 
       v-list-item.nav-item(v-for="item in navItems" dark exact :key="item.name" :to="item.link")
-        | {{ item.title }}
+        .primary--text {{ item.title }}
     .main-header-center(v-else)
       v-app-bar-nav-icon(@click.stop="drawer= true")
 
