@@ -3,8 +3,7 @@
     NavBar(:navItems="navItems", :socialLinks="socialLinks")
 
     v-main
-      v-container
-        nuxt
+      nuxt
     Footer(:socialLinks='socialLinks')
 </template>
 
