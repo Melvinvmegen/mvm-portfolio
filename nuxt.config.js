@@ -23,8 +23,7 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-  ],
+  plugins: ['~/plugins/core-components'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   // components: true,
@@ -66,5 +65,12 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+
+  router: {
+    linkActiveClass: "nav-anim",
+    scrollBehavior(to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
   }
 }

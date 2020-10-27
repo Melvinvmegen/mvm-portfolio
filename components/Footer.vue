@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-card.flex(max-height="150")
+  v-card.flex(height="375")
     v-footer(dark='' padless='' absolute)
       v-card.primary.white--text.flex(flat='' tile='')
         v-card-title.primary.white--text
