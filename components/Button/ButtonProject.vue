@@ -1,6 +1,6 @@
 <template lang="pug">
   .line-anim
-    a(:href="href")
+    a(:href="href" :style="{ color: textColor }")
       span.text {{ text }}
       span.line.-right
       span.line.-top
@@ -12,7 +12,8 @@
 export default {
   props: {
     text: String,
-    href: String
+    href: String,
+    textColor: String
   }
 }
 </script>
@@ -23,7 +24,6 @@ export default {
   }
 
   .line-anim a {
-    color: black;
     padding: 0.7em calc(0.7em * 1.2);
     display: inline-block;
     border: 3px solid transparent;
