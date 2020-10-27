@@ -5,7 +5,7 @@
         nuxt-link(:to="{path: '/'}")
           Logo(color="defaultlogo")
       .main-header-center.col-lg-7(v-if="this.$vuetify.breakpoint.mdAndUp") 
-        v-list-item.nav-item(v-for="item in navItems" dark exact :key="item.name")
+        v-list-item.nav-item.nav-anim(v-for="item in navItems" dark exact :key="item.name")
           nuxt-link(:to="item.link")
             .primary--text {{ item.title }}
             span.line.-bottom
@@ -122,7 +122,7 @@ aside .v-navigation-drawer__content {
     transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
   }
 
-  .nav-anim a :after {
+  .nav-anim .anim :after {
     position: absolute;
     content: '';
     bottom: -6px;
@@ -151,13 +151,13 @@ aside .v-navigation-drawer__content {
     transform-origin: right;
   }
 
-  .nav-anim a :active .text {
+  .nav-anim .anim :active .text {
     transform: translate3d(0, 0, 0);
     transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
   }
 
-  .nav-anim a :hover:after,
-  .nav-anim a :active:after {
+  .nav-anim .anim :hover:after,
+  .nav-anim .anim :active:after {
     transform: scale3d(0, 1, 1);
     right: -3px;
     left: -3px;
@@ -165,19 +165,19 @@ aside .v-navigation-drawer__content {
     transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
   }
 
-  .nav-anim a :hover .line,
+  .nav-anim .anim :hover .line,
   .nav-anim .line.-right {
     right: -3px;
     transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
     transform-origin: top;
   }
 
-  .nav-anim a :active .line {
+  .nav-anim .anim :active .line {
     transform: scale3d(1, 1, 1);
   }
 
-  .nav-anim a :hover .line.-bottom,
-  .nav-anim a :active .line.-bottom {
+  .nav-anim .anim :hover .line.-bottom,
+  .nav-anim .anim :active .line.-bottom {
     transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
     transform-origin: left;
   }
