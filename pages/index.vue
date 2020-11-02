@@ -12,11 +12,12 @@ import Section from "~/components/Section/Section";
 import SectionProject from "~/components/SectionProject/SectionProject";
 import SectionTestimonials from "~/components/SectionTestimonials/SectionTestimonials";
 import img from '~/assets/pose_1.png'
-import JS from '~/assets/JS.png'
-import REACT from '~/assets/react.png'
-import PostGreSQL from '~/assets/PostGreSQL.png'
-import Rails from '~/assets/Rails.png'
-import Ruby from '~/assets/RUBY.png'
+import JS from '~/assets/front/JS_text.png'
+import REACT from '~/assets/front/React_text.png'
+import Vue from '~/assets/front/Vuejs_text.png'
+import PostGreSQL from '~/assets/back/PostGreSQL.png'
+import Rails from '~/assets/back/Rails.png'
+import Ruby from '~/assets/back/Ruby_text.png'
 import Mailchimp from '~/assets/MailC.jpg'
 
 export default {
@@ -48,7 +49,7 @@ export default {
           inputs: [
             { id: 1, alt: 'Javascript', img: JS },
             { id: 2, alt: 'React', img: REACT },
-            { id: 3, alt: 'Vue', img: 'https://www.ambient-it.net/wp-content/uploads/2017/03/Vue.JS2-Logo-200.jpg' }
+            { id: 3, alt: 'Vue', img: Vue }
           ],
           ctaText: 'Découvrez mes projets',
           link: '#Mes-Projets',
@@ -107,6 +108,14 @@ export default {
     width: 100%;
     display: flex;
     min-height: 90vh;
+    position: relative;
+    align-items: center;
+  }
+
+  .section-sm {
+    width: 100%;
+    display: flex;
+    min-height: 50vh;
     position: relative;
     align-items: center;
   }
