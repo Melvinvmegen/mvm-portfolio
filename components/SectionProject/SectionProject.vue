@@ -16,11 +16,11 @@
 
 <script>
 import CarouselContent from './CarouselContent/CarouselContent'
-import Mindseed from '~/assets/mindseed.png'
-import ThomasKrief from '~/assets/thomaskrief.png'
-import SecuriGard from '~/assets/Securigard.png'
-import ReflexOsteo from '~/assets/Reflex_osteo.png'
-import TimePass from '~/assets/Timepass.png'
+import Mindseed from '~/assets/projects/mindseed.png'
+import ThomasKrief from '~/assets/projects/thomaskrief.png'
+import SecuriGard from '~/assets/projects/Securigard.png'
+import ReflexOsteo from '~/assets/projects/Reflex_osteo.png'
+import TimePass from '~/assets/projects/Timepass.png'
 
 export default {
   components: {
