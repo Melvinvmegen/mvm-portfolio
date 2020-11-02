@@ -27,6 +27,7 @@ export default {
   plugins: [
   '~/plugins/core-components',
   '~/plugins/typed-js',
+  '~/plugins/vuelidate',
     { src: "@/plugins/aos", mode: "client" },
   ],
 
