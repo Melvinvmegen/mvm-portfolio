@@ -27,6 +27,7 @@ export default {
   plugins: [
   '~/plugins/core-components',
   '~/plugins/typed-js',
+  '~/plugins/vuelidate',
     { src: "@/plugins/aos", mode: "client" },
   ],
 
@@ -49,7 +50,7 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-
+    baseURL: 'https://melvinvmegen.netlify.app/'
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)

@@ -1,14 +1,19 @@
 <template lang="pug">
   .header-right
-    v-img(:src="image" max-width="500")
+    v-img(v-if="image" :src="image" max-width="500")
+    ContactForm
 </template>
 
 <script>
-
+import ContactForm from '~/components/ContactForm/ContactForm'
 
 export default {
+  components: {
+    ContactForm
+  },
   props: {
     image: String,
+    contact: Boolean
   }
 };
 </script>
