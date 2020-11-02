@@ -16,9 +16,6 @@ export default {
     return {
       propsInputs: this.inputs
     }
-  },
-  created() {
-    console.log(this.inputs)
   }
 }
 </script>
@@ -98,9 +95,8 @@ export default {
   }
 
   #clipped {
-    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 115% 75%, 50% 100%, -25% 75%, 5% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 115% 75%, 50% 100%, -25% 75%, 5% 25%);
   }
 
   .clipped-border:hover {
