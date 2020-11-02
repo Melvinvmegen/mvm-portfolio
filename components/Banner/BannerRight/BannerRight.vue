@@ -1,20 +1,14 @@
 <template lang="pug">
-  .header-right()
-    v-img(:src="defaultpose" max-width="500")
+  .header-right
+    v-img(:src="image" max-width="500")
 </template>
 
 <script>
 
-import img from '~/assets/pose_1.png'
 
 export default {
   props: {
     image: String,
-  },
-  data() {
-    return {
-      defaultpose: img
-    }
   }
 };
 </script>

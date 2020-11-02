@@ -1,20 +1,24 @@
 <template lang="pug">
   div
-    span.circle
+    span.circle(:style="{ borderColor: color }")
     .image-show-off
-      .clipped-border(v-for="input in propsInputs" :key="input.id")
+      .clipped-border(v-for="input in propsInputs" :key="input.id" :style="{ background: color }")
         img(:src="input.img" :alt="input.alt" id='clipped')
 </template>
 
 <script>
 export default {
   props: {
-    inputs: Array
+    inputs: Array,
+    color: String
   },
   data () {
     return {
       propsInputs: this.inputs
     }
+  },
+  created() {
+    console.log(this.inputs)
   }
 }
 </script>
@@ -36,17 +40,13 @@ export default {
   }
 
   .circle {
+    border: 2px solid #254A5D;
     float: left;
     height: 300px;
     width: 300px;
     shape-outside: circle();
     background-color: transparent;
-    border: 2px solid #254A5D;
     border-radius: 50%;
-  }
-
-  .section-one .circle {
-    border: 2px solid #D1DDE6;
   }
 
   .clipped-border {
