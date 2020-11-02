@@ -27,7 +27,8 @@ export default {
     upside: Boolean,
     image: String,
     ctaText: String,
-    link: String
+    link: String,
+    contact: Boolean
   }
 };
 </script>

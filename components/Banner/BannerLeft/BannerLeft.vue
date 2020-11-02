@@ -4,7 +4,7 @@
       FakeTerminal(v-if="$route.name === 'backEnd'")
       TextHeader(:blabla="blabla" :side="$vuetify.breakpoint.smAndDown" v-else)
         br
-        CTA(v-if="ctaText" :className="true" color="accent" :text="ctaText" :link="link")
+        CTA(v-if="ctaText && link" :className="true" color="accent" :text="ctaText" :link="link")
 </template>
 
 <script>
