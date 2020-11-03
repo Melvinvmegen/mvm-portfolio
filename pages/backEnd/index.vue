@@ -5,12 +5,12 @@
     .section.primary.flex-column.white--text
       br
       br
-      TextHeader(:blabla="{title: 'Mon parcours Front-End'}" :side="true" :white="true")
+      TextHeader(:blabla="{title: 'Mon parcours Back-End'}" :side="true" :white="true")
       v-container
         Timeline(:timeLineItemsLeft="timeLineItemsLeft", :timeLineItemsRight="timeLineItemsRight" :faceImgs="faceImgs" folder="back")
     .section-sm.secondary.flex-column.white--text
       v-container
-        TextHeader(:blabla="{title: 'Un résumé de ma Stack Front-End', teaser: 'Et leurs notations pas du tout exagéré et souvent approuvé par 100 personnes'}" :side="true" :color="true")
+        TextHeader(:blabla="{title: 'Un résumé de ma Stack Back-End', teaser: 'Et leurs notations pas du tout exagéré et souvent approuvé par 100 personnes'}" :side="true" :color="true")
         .d-flex.flex-wrap(data-aos="fade-down")
           .col-md-4.col-12(v-for="skill in skills" :id="skill.name")
             Skill(:skill="skill" folder="back")
@@ -48,26 +48,26 @@ export default {
       image: img,
       timeLineItemsLeft: [ 
         { 
-          title: "Novembre 2019",
-          description: "5ème semaine du wagon et initiation à la programmation côté. Les bases du Javascript sont abordés ainsi que la manipulation du DOM et les requête Ajax."
+          title: "Octobre 2019",
+          description: "1er semaine du wagon et initiation à la programmation côté serveur. Les bases de Ruby sont abordés ainsi que les premieres notions tel que les variables, les arrays, puis progressivement les methodes etc..."
         },
         { 
-          title: "Avril 2020",
-          description: "Suite à une opportunité professionelle, je suis amené à me former sur Vuejs. En effet celui-ci était utilisé pour la création de composants javascript en combination du framework Ruby on Rails."
+          title: "Javier 2020",
+          description: "Après la formation je décide de revoir les principes que j'avais le moins compris, les bases de données et leur language SQL. Grâce à active record, PostgreSQL et pas mal de pratique ces notions me sont beaucoup plus abordables et lisibles qu'au départ. Pour approfondir un peu le sujet je m'empart d'un cours sur Udemy reprennant les bases jusqu'à un usage de PostGreSQL pour un data scientist"
         },
         { 
           title: "Octobre 2020",
-          description: "Après plusieurs projets sur Vuejs et mon affinité pour le référencement j'envisage le SSR et par extension Nuxt qui intègre vue-router par une architecture de fichier précise et un serveur node afin de générer le HTML une première fois coté serveur afin de laisser place à la magie de vue côté client."
+          description: "Comment conclure autrement qu'avec le testing, cette mention dont tout offre d'emploi dispose mais surtout l'étape que tout développeur junior redoute. Alors mis cours en main, prêt à implémenter des tests sur tous mes projets."
         },
       ],
       timeLineItemsRight: [ 
         { 
-          title: "Décembre 2019",
-          description: "Après reflexion je découvre reactjs et ses multiples possibilités allant même jusqu'au développement d'application avec React Native, me voilà conquis, cours udemy en poche. J'entreprend la création de mon portfolio sur Reactjs."
+          title: "Novembre 2019",
+          description: "Semaine 6 découverte de Rails et de la simplification qu'il apporte à la création basique d'un projet CRUD. La formation achevée par deux projets me voilà à même de laisser place à ma créativité pour créer un projet from scratch. Quoi de plus utile qu'un portfolio ?"
         },
         { 
-          title: "Juin 2020",
-          description: "Après de multiple manipulation de composants Vue je décide convertir mon portfolio sur vue et ainsi de m'initier à vue-router et vuex."
+          title: "Mars 2020",
+          description: "Après de nombreux projets avec l'utilisation de javascript et la découverte de webpacker avec Rails 6, je décide d'approfondir le sujet et plus précisement la doc."
         }
       ],
       textHeader: {
@@ -75,7 +75,7 @@ export default {
         teaser: "Ils ont fait appel à mes services pour du développement front-end",
         text: ''
       },
-      faceImgs: ['Ruby_text.png', 'Rails.png', 'Webpack_text.png', 'PostGreSQL.png', 'Rails.png'],
+      faceImgs: ['Ruby_text.png', 'Rails_text.png', 'Webpack_text.png', 'PostGreSQL_text.png', 'Rspec_text.png'],
       skills: [
         {
           img: "Webpack.png",
@@ -85,7 +85,7 @@ export default {
           rating: 3
         },
         {
-          img: "Rails.png",
+          img: "Rspec.png",
           name: "Rspec",
           price: '300',
           description: "J'adore le fait de pas avoir à me préoccuper des routes.. J'adore le fait de pas avoir à me préoccuper des routes..",
@@ -121,6 +121,10 @@ export default {
         { 
           name: "Le wagon",
           src: "lewagon.png"
+        },
+        { 
+          name: "Platon Formation",
+          src: "platonformation.png"
         },
         { 
           name: "SecuryGard",
