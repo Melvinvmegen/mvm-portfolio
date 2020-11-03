@@ -1,13 +1,13 @@
 <template lang="pug">
   .section-home(v-if="upside" :class="{'flex-column': $vuetify.breakpoint.smAndDown}")
-    BannerRight.col-md-5.col-12(:image="image")
+    BannerRight.col-md-5.col-12(:image="image" :contact="contact")
     BannerLeft.col-md-7.col-12(:blabla='blabla' :ctaText="ctaText" :link="link")
     .banner-bottom
       .banner-gradient
       .banner-cancel-gradient
   .section-home(v-else :class="{'flex-column-reverse': $vuetify.breakpoint.smAndDown}")
     BannerLeft.col-md-7.col-12(:blabla='blabla' :ctaText="ctaText" :link="link")
-    BannerRight.col-md-5.col-12(:image="image")
+    BannerRight.col-md-5.col-12(:image="image" :contact="contact")
     .banner-bottom
       .banner-gradient
       .banner-cancel-gradient

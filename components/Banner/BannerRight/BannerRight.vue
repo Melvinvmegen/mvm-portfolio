@@ -1,7 +1,7 @@
 <template lang="pug">
   .header-right
     v-img(v-if="image" :src="image" max-width="500")
-    ContactForm
+    ContactForm(v-if="contact")
 </template>
 
 <script>

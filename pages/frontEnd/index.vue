@@ -49,7 +49,7 @@ export default {
       timeLineItemsLeft: [ 
         { 
           title: "Novembre 2019",
-          description: "5ème semaine du wagon et initiation à la programmation côté. Les bases du Javascript sont abordés ainsi que la manipulation du DOM et les requête Ajax."
+          description: "5ème semaine du wagon et initiation à la programmation côté client. Les bases du Javascript sont abordés ainsi que la manipulation du DOM et les requête Ajax."
         },
         { 
           title: "Avril 2020",
