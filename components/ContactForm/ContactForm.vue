@@ -1,52 +1,52 @@
 <template lang="pug">
-.row.justify-center.contact-container.col-lg-9.col-md-10
- form.col-lg-10(ref="form")
-  h2.text-center Formulaire de contact
-  br
-  v-alert(v-if="success" dense elevation="2" type="success") {{ success }}
-  v-alert(v-if="error" dense elevation="2" type="warning") {{ error }}
-  .d-flex.justify-center(v-if='isLoading')
-    Spinner
-  v-text-field#name.form-control(
-  label="Nom",
-  type="text",
-  v-model.lazy="contactData.name",
-  @blur="$v.contactData.name.$touch()"
-  :class="{ 'error--text': $v.contactData.name.$error }"
-  )
-  v-text-field#firstname.form-control( 
-  label="Prénom",
-  type="text",
-  v-model.lazy="contactData.firstname",
-  @blur="$v.contactData.firstname.$touch()"
-  :class="{ 'error--text': $v.contactData.firstname.$error }"
-  )
-  v-text-field#email.form-control( 
-  label="Email",
-  type="text",
-  v-model.lazy="contactData.email",
-  @blur="$v.contactData.email.$touch()"
-  :class="{ 'error--text': $v.contactData.email.$error }"
-  )
-  v-text-field#phone.form-control( 
-  label="Téléphone",
-  type="text",
-  v-model.lazy="contactData.phone",
-  @blur="$v.contactData.phone.$touch()"
-  :class="{ 'error--text': $v.contactData.phone.$error }"
-  )
-  v-textarea#query.form-control(
-  label="Demande",
-  type="text",
-  auto-grow,
-  v-model.lazy="contactData.query",
-  @blur="$v.contactData.query.$touch()"
-  :class="{ 'error--text': $v.contactData.query.$error }"
-  )
-  .d-flex
-    .form-button.my-2.mr-2
-      v-btn(color='success' :disabled="$v.$invalid" @click.prevent="onSubmit" ref="button")
-        | Prendre contact
+  .row.justify-center.contact-container.col-lg-9.col-md-10
+    form.col-lg-10(ref="form")
+      h2.text-center Formulaire de contact
+      br
+      v-alert(v-if="success" dense elevation="2" type="success") {{ success }}
+      v-alert(v-if="error" dense elevation="2" type="warning") {{ error }}
+      .d-flex.justify-center(v-if='isLoading')
+        Spinner
+      v-text-field#name.form-control(
+      label="Nom",
+      type="text",
+      v-model.lazy="contactData.name",
+      @blur="$v.contactData.name.$touch()"
+      :class="{ 'error--text': $v.contactData.name.$error }"
+      )
+      v-text-field#firstname.form-control( 
+      label="Prénom",
+      type="text",
+      v-model.lazy="contactData.firstname",
+      @blur="$v.contactData.firstname.$touch()"
+      :class="{ 'error--text': $v.contactData.firstname.$error }"
+      )
+      v-text-field#email.form-control( 
+      label="Email",
+      type="text",
+      v-model.lazy="contactData.email",
+      @blur="$v.contactData.email.$touch()"
+      :class="{ 'error--text': $v.contactData.email.$error }"
+      )
+      v-text-field#phone.form-control( 
+      label="Téléphone",
+      type="text",
+      v-model.lazy="contactData.phone",
+      @blur="$v.contactData.phone.$touch()"
+      :class="{ 'error--text': $v.contactData.phone.$error }"
+      )
+      v-textarea#query.form-control(
+      label="Demande",
+      type="text",
+      auto-grow,
+      v-model.lazy="contactData.query",
+      @blur="$v.contactData.query.$touch()"
+      :class="{ 'error--text': $v.contactData.query.$error }"
+      )
+      .d-flex
+        .form-button.my-2.mr-2
+          v-btn(color='success' :disabled="$v.$invalid" @click.prevent="onSubmit" ref="button")
+            | Prendre contact
 </template>
 
 <script>
