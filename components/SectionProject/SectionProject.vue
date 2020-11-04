@@ -18,7 +18,7 @@
 import CarouselContent from './CarouselContent/CarouselContent'
 import Mindseed from '~/assets/projects/mindseed.png'
 import ThomasKrief from '~/assets/projects/thomaskrief.png'
-import SecuriGard from '~/assets/projects/Securigard.png'
+import SecuryGard from '~/assets/projects/Securygard.png'
 import ReflexOsteo from '~/assets/projects/Reflex_osteo.png'
 import TimePass from '~/assets/projects/Timepass.png'
 
@@ -63,11 +63,11 @@ export default {
             { id: 7, name: 'Heroku' }
           ]
         },
-        securigard: {
-          title: 'SECURIGARD',
+        securygard: {
+          title: 'SECURyGARD',
           desc: "Projet de création d'une application Web de gestion de base de données clients avec partage de documents sécurisés entre administrateurs et utilisateurs, création dynamique de contrats (format pdf) et distribution et remplissage d'enquête clients. Création et mise en place de la charte graphique.",
-          img: SecuriGard,
-          alt: 'SECURIGARD',
+          img: SecuryGard,
+          alt: 'SECURyGARD',
           href: 'https://serene-falls-79228.herokuapp.com/',
           btnText: '► Se rendre sur le site',
           tags: [
@@ -144,7 +144,6 @@ export default {
     line-height: 2.5;
     font-weight: 800;
     text-align: center;
-    padding-right: 13%;
     color: #D1DDE6;
   }
 

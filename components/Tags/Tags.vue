@@ -15,11 +15,11 @@ export default {
   .tag-list {
     position: relative;
     list-style-type: none;
-    padding-right: 10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 20px 0;
+    margin: 20px auto;
+    width: 60%;
   }
 
   .tag {

@@ -1,11 +1,11 @@
 <template lang="pug">
   .timeline.d-flex
     .d-flex.col-4.white--text
-      TimelineItem(v-for="item in timeLineItemsLeft" :timeLineItemData="item")
+      TimelineItem(v-for="item in timeLineItemsLeft" :key="item.title" :timeLineItemData="item")
     .col-4.js-img
       Cube(:scrollPosition="scrollPosition" :faceImgs="faceImgs" :folder="folder")
     .d-flex.col-4.white--text
-      TimelineItem(v-for="item in timeLineItemsRight" :timeLineItemData="item" :left="true")
+      TimelineItem(v-for="item in timeLineItemsRight" :key="item.title" :timeLineItemData="item" :left="true")
 
 </template>
 
@@ -36,7 +36,10 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll);
-  }
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.updateScroll);
+  },
 }
 </script>
 
