@@ -2,7 +2,7 @@
   .full 
     .d-flex
       Banner(:blabla='bannerBlaBla', :image="image" :ctaText="ctaText" :link="link")
-    Section(v-for="section in Sections" :blabla='section.blabla', :polygonInputs="section.inputs" :ctaText="section.ctaText" :link="section.link" :color="section.color" :reverse="section.reverse")
+    Section(v-for="section in Sections" :key="section.blabla.id" :blabla='section.blabla', :polygonInputs="section.inputs" :ctaText="section.ctaText" :link="section.link" :color="section.color" :reverse="section.reverse")
     SectionProject
     SectionTestimonials
 </template>
