@@ -145,5 +145,13 @@ export default {
 .company-logo {
   display: block;
   margin: 0 auto;
+  filter: grayscale(100%);
+  opacity: .5;
+  transition: all .25s ease;
+}
+
+.company-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
 }
 </style>
