@@ -6,7 +6,7 @@
           Logo(color="defaultlogo")
       .main-header-center.col-lg-7(v-if="this.$vuetify.breakpoint.mdAndUp") 
         v-list-item.nav-item.nav-anim(v-for="item in navItems" dark exact :key="item.name")
-          nuxt-link(:to="item.link")
+          nuxt-link(:to="{name: item.link}")
             .primary--text {{ item.title }}
             span.line.-bottom
       .main-header-center(v-else)
