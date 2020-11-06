@@ -2,11 +2,17 @@
   .full
     .d-flex
       Banner(:blabla='BannerBlabla' :contact="true")
+    SectionTestimonials
 </template>
 
 <script>
+import SectionTestimonials from "~/components/SectionTestimonials/SectionTestimonials";
+
 export default {
   name: "Contact",
+  components: {
+    SectionTestimonials
+  },
   data() {
     return {
       BannerBlabla: {

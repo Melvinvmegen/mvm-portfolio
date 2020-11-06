@@ -84,7 +84,7 @@ export default {
           },
           inputs: [
             { id: 1, alt: 'MailChimp', img: Mailchimp },
-            { id: 2, alt: 'Ahrefs', img: 'https://3x5yp62s8loz3jw8273enqos16xh-wpengine.netdna-ssl.com/wp-content/uploads/icon360-Analytics.png' },
+            { id: 2, alt: 'Analytics', img: 'https://3x5yp62s8loz3jw8273enqos16xh-wpengine.netdna-ssl.com/wp-content/uploads/icon360-Analytics.png' },
             { id: 3, alt: 'AdWords', img: 'https://www.pngitem.com/pimgs/m/242-2422855_transparent-google-adwords-logo-png-google-adwords-logo.png' }
           ],
           ctaText: 'Découvrez mes projets',
