@@ -2,8 +2,8 @@
   .section-testimonial
     .section-main-testimonials
       .section-title.text-center
-        h2.title-bold ILS M'ONT FAIT CONFIANCE
-        h3.featured-item-subheader.text-center.italic Pour leurs projets de développement d'application web
+        h2.title-bold.primary--text ILS M'ONT FAIT CONFIANCE
+        h3.featured-item-subheader.text-center.italic.primary--text Pour leurs projets de développement d'application web
       .row-fluid
         .section-testimonials
           Testimonial(:testimonials="testimonials")
@@ -78,17 +78,6 @@ export default {
   .section-testimonials-inner {
     height: 500px;
     margin: auto;
-  }
-
-  .testimonials-list {
-    height: 500px;
-    padding: 20px 0;
-    display: flex;
-  }
-
-  .testimonials-slide.isvisible {
-    opacity: 1;
-    transform: rotateZ(0deg);
   }
 
   @media (max-width: 768px) {

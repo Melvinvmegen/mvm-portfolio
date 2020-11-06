@@ -1,6 +1,6 @@
 <template lang="pug">
-  .testimonials-list
-    .testimonials-slide(class="pr-4 w-1_3" v-for="testimonial in testimonials" :key="testimonial.id" :class="{isvisible : showTestimonial}")
+  .testimonials-list(data-aos="animate-testimonials")
+    .testimonials-slide(class="pr-4 w-1_3" v-for="testimonial in testimonials" :key="testimonial.id")
       .slide-container.card-testimonial.testimonial
         .testimonials-content
           .testimonial-infos
@@ -18,30 +18,27 @@
 export default {
   props: {
     testimonials: Array
-  },
-  data () {
-    return {
-      showTestimonial: false,
-      ScrollPosition: 4100
-    }
-  },
-  mounted () {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  methods: {
-    handleScroll () {
-      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
-      if (currentScrollPosition < this.ScrollPosition) {
-        return
-      }
-      this.showTestimonial = currentScrollPosition > this.ScrollPosition
-      window.removeEventListener('scroll', this.handleScroll)
-    }
   }
 }
 </script>
 
 <style>
+  .testimonials-list {
+    height: 500px;
+    padding: 20px 0;
+    display: flex;
+  }
+
+  [data-aos=animate-testimonials] .testimonials-slide {
+    opacity: 0;
+    transition-property: transform, opacity;
+  }
+
+  [data-aos=animate-testimonials].aos-animate .testimonials-slide {
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+
   .testimonials-slide {
     height: 100%;
     min-height: 1px;
