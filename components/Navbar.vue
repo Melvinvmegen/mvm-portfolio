@@ -17,19 +17,18 @@
         br
         v-list(nav='' dense='')
           v-list-item-group
-            v-list-item.nav-anim(v-for='item in navItems' :key='item.title' :to='item.link' two-line exact)
-              v-list-item-icon.align-self-center
-                v-icon {{ item.icon }}
-              v-list-item-content
-                v-list-item-title {{ item.title }}
-              span.line.-bottom
+            v-list-item.nav-anim(v-for='item in navItems' :key='item.title' :to="{name: item.link}" two-line exact)
+              nuxt-link(:to="{name: item.link}")
+                v-list-item-content
+                  v-list-item-title.ml-4 {{ item.title }}
+                    span.line.-bottom
             v-divider
             br
             v-list-item.d-flex(:class="{'flex-column': $vuetify.breakpoint.smAndDown}")
               h3 Retrouvez moi sur
               .icons 
-                v-btn.deep-purple--text(v-for='link in socialLinks' :key='link.id' icon='' :to='link.link')
-                  v-icon(size='20px' color="#9575CD")
+                v-btn(v-for='link in socialLinks' :key='link.id' icon='' :to='link.link')
+                  v-icon(size='20px' color="#234A5D")
                     | {{ link.icon }}
 
 </template>
@@ -116,6 +115,7 @@ aside .v-navigation-drawer__content {
     border: 3px solid transparent;
     position: relative;
     cursor: pointer;
+    text-decoration: none;
   }
 
   .nav-anim a .text {

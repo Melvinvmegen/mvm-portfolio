@@ -35,7 +35,7 @@ export default {
 
 @media only screen and (max-width: 960px) {
   .banner-img {
-    max-width: 600px !important;
+    max-width: 550px !important;
   }
 }
 
