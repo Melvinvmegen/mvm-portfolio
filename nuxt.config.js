@@ -48,9 +48,13 @@ export default {
     '@nuxtjs/pwa',
   ],
 
+  env: {
+    baseUrl: 'https://mvm-db.herokuapp.com/',
+  },
+
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'https://mvm-db.herokuapp.com/'
+    baseURL: process.env.baseUrl
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)

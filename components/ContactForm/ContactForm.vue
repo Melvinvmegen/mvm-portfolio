@@ -93,7 +93,7 @@ export default {
     onSubmit() {
       this.isLoading = true
       axios
-        .post("api/contacts", {
+        .post(process.env.baseUrl + "api/contacts", {
           name: this.contactData.name,
           firstname: this.contactData.firstname,
           email: this.contactData.email,
