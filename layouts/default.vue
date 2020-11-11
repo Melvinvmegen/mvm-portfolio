@@ -40,4 +40,12 @@ export default {
   body {
     font-family: Montserrat,BuenosAires,sans-serif;
   }
+
+  .v-list-item--active::before {
+    opacity: 0 !important;
+  }
+
+  .theme--light.v-list-item:hover::before {
+    opacity: 0 !important;
+  }
 </style>
