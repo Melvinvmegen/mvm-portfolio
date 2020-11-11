@@ -1,13 +1,15 @@
 <template lang="pug">
-  .section-home(v-if="upside" :class="{'flex-column': $vuetify.breakpoint.smAndDown}")
+  .section-home.flex-md-row.flex-column-reverse(v-if="upside")
     BannerRight.col-md-5.col-12(:image="image" :contact="contact")
-    BannerLeft.col-md-7.col-12(:blabla='blabla' :ctaText="ctaText" :link="link")
+    BannerLeft.col-md-7.col-12(:blabla='blabla' :ctaText="ctaText" :link="link" :side="sideReverse")
+    img.cube-banner.d-md-flex.d-none(src="~/assets/front/cube_front.png" max-width="400" v-if="$route.name === 'frontEnd' || $route.name === 'backEnd'")
     .banner-bottom
       .banner-gradient
       .banner-cancel-gradient
-  .section-home(v-else :class="{'flex-column-reverse': $vuetify.breakpoint.smAndDown}")
-    BannerLeft.col-md-7.col-12(:blabla='blabla' :ctaText="ctaText" :link="link")
+  .section-home.flex-md-row.flex-column(v-else)
+    BannerLeft.col-md-7.col-12(:blabla='blabla' :ctaText="ctaText" :link="link" :side="side")
     BannerRight.col-md-5.col-12(:image="image" :contact="contact")
+    img.cube-banner.d-md-flex.d-none(src="~/assets/back/cube_back.png" max-width="400" v-if="$route.name === 'frontEnd' || $route.name === 'backEnd'")
     .banner-bottom
       .banner-gradient
       .banner-cancel-gradient
@@ -29,11 +31,28 @@ export default {
     ctaText: String,
     link: String,
     contact: Boolean
+  },
+  computed: {
+    sideReverse() {
+      return this.$vuetify.breakpoint.smAndDown ? "center" : "right"
+    },
+    side() {
+      return this.$vuetify.breakpoint.smAndDown ? "center" : "left"
+    }
   }
 };
 </script>
 
 <style>
+.cube-banner {
+  width: 400px;
+  position: fixed;
+  bottom: 10vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+
 .section-home {
   padding: 0;
   width: 100%;
@@ -86,33 +105,44 @@ export default {
     height: 100vh !important;
   }
 
-  .header-right {
+  .header-height {
     width: 100% !important;
-    max-height: 20vh !important;
+    max-height: 50vh !important;
+  }
+
+  .header-height-contact {
+    width: 100% !important;
+    min-height: 50vh !important;
   }
 
   .header {
-    max-height: 80vh !important;
+    margin: 50px 0 0 0;
+    max-height: 40vh !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    margin: 20px 0 0 0;
+    max-height: 60vh !important;
+  }
+
+  .header-height-contact {
+    min-height: 45vh !important;
+  }
+
+  .header-height {
+    max-height: 40vh !important;
   }
 }
 
 @media only screen and (max-width: 400px) {
   .header {
-    max-height: 90vh !important;
+    max-height: 70vh !important;
   }
 
-  .header-right {
-    max-height: 10vh !important;
-  }
-}
-
-@media only screen and (max-width: 330px) {
-  .header {
-    max-height: 95vh !important;
-  }
-
-  .header-right {
-    max-height: 5vh !important;
+  .header-height {
+    max-height: 30vh !important;
   }
 }
 </style>

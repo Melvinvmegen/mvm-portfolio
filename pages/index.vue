@@ -2,7 +2,7 @@
   .full 
     .d-flex
       Banner(:blabla='bannerBlaBla', :image="image" :ctaText="ctaText" :link="link")
-    Section(v-for="section in Sections" :key="section.blabla.id" :blabla='section.blabla', :polygonInputs="section.inputs" :ctaText="section.ctaText" :link="section.link" :color="section.color" :reverse="section.reverse")
+    Section(v-for="section in Sections" :key="section.blabla.id" :blabla='section.blabla', :sectionImage="section.sectionImage" :ctaText="section.ctaText" :link="section.link" :color="section.color" :reverse="section.reverse")
     SectionProject
     SectionTestimonials
 </template>
@@ -11,14 +11,9 @@
 import Section from "~/components/Section/Section";
 import SectionProject from "~/components/SectionProject/SectionProject";
 import SectionTestimonials from "~/components/SectionTestimonials/SectionTestimonials";
-import img from '~/assets/pose_1.png'
-import JS from '~/assets/front/JS_text.png'
-import REACT from '~/assets/front/React_text.png'
-import Vue from '~/assets/front/Vuejs_text.png'
-import PostGreSQL from '~/assets/back/PostGreSQL.png'
-import Rails from '~/assets/back/Rails.png'
-import Ruby from '~/assets/back/Ruby_text.png'
-import Mailchimp from '~/assets/MailC.jpg'
+import img from '~/assets/homepage.png'
+import computerFront from '~/assets/computer.png'
+import computerBack from '~/assets/computer_back.png'
 
 export default {
   components: {
@@ -42,53 +37,41 @@ export default {
           blabla: {
             id: 1,
             title: 'DEVELOPPEUR FRONT-END',
-            subtitle: 'React.js, Vue.js, Freelance',
-            text: "Grâce à mon expérience professionnelle, j'ai pu suivre de multiples cours sur les languages suivants : HTML, CSS, Javascript. Et ainsi étendre mes compétences digitale. Certifié du Wagon après deux mois de bootcamp, j'ai décider d'étendre mes compétences en <strong>Javascript</strong>. Language à l'aide duquel je me suis spécialisé dans le front-end avec pour framework : <strong>React.js</strong>. Dans la continuité et au vu d'une opportunité professionelle j'en suis venu à découvrir et apprécier le framework <strong>Vue.js</strong>",
+            subtitle: 'Vue.js, React.js, Freelance',
+            text: "Au cours de ma première expérience professionnelle en tant de marketer digital, j'ai pu suivre de multiples cours sur les languages suivants : HTML, CSS,  mais aussi Javascript. Et ainsi étendre mes compétences digitale. Certifié du Wagon après deux mois de bootcamp, j'ai décider d'étendre de compléter mes bases en <strong>Javascript</strong>. Language à l'aide duquel je me suis spécialisé dans le front-end avec pour framework : <strong>React.js</strong>. Dans la continuité et au vu d'une opportunité professionelle j'en suis venu à découvrir et favoriser le framework <strong>Vue.js</strong>",
             textColor: "#D1DDE5"
           },
-          inputs: [
-            { id: 1, alt: 'Javascript', img: JS },
-            { id: 2, alt: 'React', img: REACT },
-            { id: 3, alt: 'Vue', img: Vue }
-          ],
+          sectionImage: computerFront,
           ctaText: 'Découvrez mes projets',
-          link: '#Mes-Projets',
+          link: 'projets',
           color: '#234A5D',
           reverse: false
         },
         SectionBack: {
           blabla: {
-            id: 1,
+            id: 2,
             title: 'DEVELOPPEUR BACK-END',
             subtitle: 'Ruby on Rails, Freelance',
-            text: "Certifié du Wagon après un bootcamp de deux mois, où j'ai pu compléter mes compétences par un language supplémentaire, <strong>Ruby</strong> et son framework, <strong>Rails</strong>. Le Wagon m'a également initié à la gestion de base de données avec son language SQL et des outils tel que MongoDB ou encore <strong>PostgreSQL</strong>. Actuellement en mission pour Reflex Osteo avec pour référent technique Studio HB agence web spécialisé sur rails.",
+            text: "Certifié du Wagon après un bootcamp de deux mois, où j'ai pu élargir mes compétences par un language supplémentaire, <strong>Ruby</strong> et son framework, <strong>Rails</strong>. Le Wagon m'a également initié à la gestion de base de données relationnelle avec son language SQL et des outils tel que <strong>PostgreSQL</strong>. Je travail actuellement en collaboration avec une agence web spécialisée sur rails (Studio HB) qui m'a énormément fait progresser dans la structure de mon code, des bonnes pratiques à suivre et cela m'a aussi fait prendre conscience des notions de sécurité et de performance.",
             textColor: "#234A5D"
           },
-          inputs: [
-            { id: 1, alt: 'Ruby', img: Ruby },
-            { id: 2, alt: 'Rails', img: Rails },
-            { id: 3, alt: 'PostgreSQL', img: PostGreSQL }
-          ],
+          sectionImage: computerBack,
           ctaText: 'Découvrez mes projets',
-          link: '#Mes-Projets',
+          link: 'projets',
           color: '#fff',
           reverse: true
         },
         SectionMarketingDigital: {
           blabla: {
-            id: 1, 
+            id: 3, 
             title: 'MARKETEUR DIGITAL',
             subtitle: 'Bachelor, spécialisation Marketing', 
-            text: "Etudes réalisées à Kedge Business School ou j'ai eu la chance de développer mes compétences numériques à travers de nombreux stages et expériences. Tel que mes 2 années passées en tant que responsable de la transition digitale pour le marché français au sein de l'entreprise, Royal Brinkman. Au cours de cette expérience j'ai appris à maîtriser le <strong>SEO</strong>, le <strong>SEA</strong> ainsi que l'email marketing à l'aide de différents outils tels que <strong>Mailchimp</strong>, Hotjar, <strong>Adwords</strong>, <strong>Google Analytics</strong>, ahrefs et Joomla pour CMS.",
+            text: "Etudes réalisées à Kedge Business School où j'ai eu la chance de développer mes compétences numériques à travers de nombreux stages et expériences. Tel que mes 2 années passées en tant que responsable de la transition digitale pour le marché français au sein de l'entreprise, Royal Brinkman. Au cours de cette expérience j'ai appris à maîtriser le <strong>SEO</strong>, le <strong>SEA</strong> ainsi que l'email marketing à l'aide de différents outils tels que <strong>Mailchimp</strong>, Hotjar, <strong>Adwords</strong>, <strong>Google Analytics</strong>, ou encore ahrefs. Le tout avec Joomla pour CMS.",
             textColor: "#234A5D"
           },
-          inputs: [
-            { id: 1, alt: 'MailChimp', img: Mailchimp },
-            { id: 2, alt: 'Analytics', img: 'https://3x5yp62s8loz3jw8273enqos16xh-wpengine.netdna-ssl.com/wp-content/uploads/icon360-Analytics.png' },
-            { id: 3, alt: 'AdWords', img: 'https://www.pngitem.com/pimgs/m/242-2422855_transparent-google-adwords-logo-png-google-adwords-logo.png' }
-          ],
+          sectionImage: '',
           ctaText: 'Découvrez mes projets',
-          link: '#Mes-Projets',
+          link: 'projets',
           color: '#D1DDE5',
           reverse: false
         }
@@ -110,6 +93,7 @@ export default {
     min-height: 90vh;
     position: relative;
     align-items: center;
+    z-index: 2;
   }
 
   .section-sm {
@@ -118,6 +102,7 @@ export default {
     min-height: 50vh;
     position: relative;
     align-items: center;
+    z-index: 2;
   }
 
   .title-bold {
@@ -140,7 +125,6 @@ export default {
     width: 100%;
     position: relative;
     display: flex;
-    margin-top: 100px
   }
 
   .section-left {
@@ -148,12 +132,6 @@ export default {
     left: 0;
     max-width: 50%;
     flex: 0 0 50%;
-  }
-
-  .section-right {
-    flex: 0 0 50%;
-    max-width: 50%;
-    text-align: center;
   }
 
   .section-wrapper-right {
@@ -185,12 +163,6 @@ export default {
       max-width: 100% !important;
       flex: 0 0 100% !important;
       margin-bottom: 50px;
-    }
-
-    .section-right {
-      flex: 0 0 100% !important;
-      max-width: 100% !important;
-      text-align: center;
     }
   }
 

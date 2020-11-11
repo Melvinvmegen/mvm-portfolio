@@ -1,5 +1,5 @@
 <template lang="pug">
-  .row.justify-center.contact-container.col-lg-9.col-md-10
+  .row.justify-center.contact-container.col-lg-9.col-md-10.col-sm-8.col-9
     form.col-lg-10(ref="form")
       h2.text-center Formulaire de contact
       br
@@ -124,14 +124,26 @@ export default {
 </script>
 
 <style>
+.contact-img {
+  max-width: 300px !important;
+  position: absolute;
+  top: 0;
+  left: 29%;
+  z-index: 3;
+  transform: translate(-90%);
+}
+
 .contact-container {
   box-shadow: rgba(0, 0, 0, 0.03) 0px 24px 32px,
     rgba(0, 0, 0, 0.06) 0px 8px 32px;
   padding: 62px;
   margin: -5vh 30px -5vh;
   position: absolute;
-  width: 70%;
   left: -3vh;
+  bottom: 0;
+  z-index: 2;
+  background: white;
+  border-radius: 4%;
 }
 
 .error--text label {
@@ -144,15 +156,50 @@ export default {
 
 @media only screen and (max-width: 960px) {
   .contact-container {
+    bottom: -50vh;
+  }
+
+  .contact-container {
     left: 0 !important;
     right: 0;
     margin: auto;
   }
+
+  .contact-img {
+    width: 250px;
+    top: -5vh !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 600px) {
+  .contact-img {
+    width: 220px;
+    top: 0vh !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
   .contact-container {
-    padding: 25px !important;
+    bottom: -50vh;
+    padding: 40px !important;
+  }
+
+  .contact-img {
+    top: -2vh !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .contact-img {
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .contact-img {
+    width: 170px;
   }
 }
 </style>

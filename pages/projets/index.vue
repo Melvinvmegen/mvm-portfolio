@@ -3,26 +3,31 @@
     .d-flex
       Banner(:blabla='BannerBlabla', :image="image" :ctaText="ctaText" :link="link")
     .section-sm.primary.flex-column.white--text
-      TextHeader(:blabla="{title: 'Mes réalisations', teaser: 'Du site vitrine au backoffice de gestion en passant par des applications web (PWA)'}" :side="true" :white="true")
-      .d-flex.flex-wrap.justify-center
-        v-flex.col-10.col-lg-5.mb-12(v-for="item in items" :key='item.title')
-          nuxt-link(:to="{ name: 'projets-name', params: { name: item.title, item: item }}")
-            v-img.project-img(:src="require(`~/assets/projects/${item.img}`)" :alt="item.alt" :href="item.href" data-aos="zoom-in")
-              .img-text
-                h2.title-slide {{ item.title }}
-                p.teaser-slide {{ item.teaser }}
+      TextHeader(:blabla="{title: 'Mes réalisations', teaser: 'Du site vitrine au backoffice de gestion en passant par des applications web (PWA)'}" side="center" :white="true")
+      .d-flex.flex-wrap.justify-center.col-10.center-middle
+        v-flex.col-10.col-lg-6.mb-12(v-for="item in items" :key='item.title')
+          ProjectCard(:project="item")
+    .section-sm.white.flex-column.justify-center
+      .d-flex.justify-center.align-center.col-10.flex-wrap
+        .col-sm-6.col-12.d-flex.justify-center.align-center
+          v-img(:src="contactImg")
+        .col-sm-6.col-12
+          h2 Alors convaincus par mon profil ?
+          span Prenez contact et échangons sur votre projet.
+          CTA(v-if="ctaText && link" :className="true" color="accent" :text="ctaText" :link="link")
       nuxt-child
 </template>
 
 <script>
 import Section from "~/components/Section/Section";
-import img from '~/assets/pose_1.png'
-import Tags from '~/components/Tags/Tags'
+import img from '~/assets/projects/projects.png'
+import ProjectCard from '~/components/ProjectCard/ProjectCard'
+import contactImg from '~/assets/projects/envelope.png'
 
 export default {
   components: {
     Section,
-    Tags
+    ProjectCard
   },
   data() {
     return {
@@ -31,9 +36,10 @@ export default {
         teaser: "Du site vitrine au backoffice de gestion en passant par des applications web (PWA)",
         text: "En décembre 2019, suite à 3 mois de bootcamp intensif à apprendre à coder, me voilà face à un choix draconien auquel tout développeur web est un jour confronté, plutôt front ou plutôt back ? Après des jours à tergiverser, je me décide... le Javascript parce que oui avec lui on peut faire les deux mais aussi et surtout créer des applications web toujours plus animées."
       },
-      ctaText: "Découvrez mes projets Front-end",
-      link: "/projets",
+      ctaText: "Prenons contact",
+      link: "/contact",
       image: img,
+      contactImg: contactImg,
       items: {
         reflexosteo: {
           title: 'REFLEX OSTEO',
@@ -129,69 +135,7 @@ export default {
 </script>
 
 <style>
-  .project-img {
-    max-width: 100%;
-    box-shadow: 0 0.3125rem 1rem 0 rgba(0,0,0,.24);
-  }
-
-  .project-img .v-image__image {
-    transition: all .5s;
-    filter: grayscale(100%);
-  }
-
-  .project-img:hover .v-image__image {
-    transform: scale(1.1);
-    filter: grayscale(0%);
-  }
-
-  .project-img:hover .v-image__image:before {
-    display: block;
-  }
-
-  .project-img:hover .v-responsive__content .img-text {
-    display: block;
-  }
-
-
-  .v-image__image:before {
-    content: "";
-    display: none;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(52,73,94,0.75);
-    transition: all .6s ease;
-  }
-
-  .img-text {
-    width: 16rem;
-    height: 9em;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
-    display: none;
-    transition: all .6s ease;
-  }
-
-  .teaser-slide {
-    color: #D1DDE6;
-    border-top: 1px solid #D1DDE6;
-    padding-top: 16px;
-  }
-
-  .title-slide {
-    font-size: 30px;
-    text-decoration: none;
-    line-height: 2.5;
-    font-weight: 800;
-    text-align: center;
-    padding-right: 13%;
-    color: #D1DDE6;
-  }
+ .center-middle {
+   margin: 0 auto;
+ }
 </style>

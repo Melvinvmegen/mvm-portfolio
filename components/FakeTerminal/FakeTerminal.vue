@@ -1,16 +1,17 @@
 <template lang="pug">
-  .fakeTerminal
-    .fakeMenu
+  .fakeTerminal.col-sm-10.col-12
+    .fakeMenu.col-sm-10.col-12
       .fakeButtons.ml-2
         .fakeButton.fakeClose
         .fakeButton.fakeMinimize
         .fakeButton.fakeZoom
-    .fakeScreen
+    .fakeScreen.col-sm-10.col-12
       .typed-container
-        vue-typed-js(:strings="strings" :typeSpeed="40" :loop="false" contentType: 'html' :smartBackspace="true")
+        vue-typed-js(:strings="strings" :typeSpeed="40" :loop="false" contentType: 'html' :smartBackspace="true" @onComplete="showButton()")
           span.line
             |  
             span.typing
+      slot
 </template>
 
 <script>
@@ -24,13 +25,17 @@ export default {
           '<span style="color: chartreuse;"> -> </span> cd Melvinvmegen/code/developpeur-back-end<br><span style="color: aqua">developpeur-back-end</span><br><span style="color: chartreuse;"> -> </span> cd teaser<br><span style="color: aqua">teaser</span> Pour vos applications web sur Ruby on Rails<br><span style="color: chartreuse;"> -> </span> cd description ^1000\n `<br><span style="color: aqua">description</span> En décembre 2019, suite à 3 mois de bootcamp intensif à apprendre à coder, me voilà face à un choix draconien auquel tout développeur web est un jour confronté, plutôt front ou plutôt back ? Après des jours à tergiverser, je me décide... le Javascript parce que oui avec lui on peut faire les deux mais aussi et surtout créer des applications web toujours plus animées.`'
         ]
     }
+  },
+  methods: {
+    showButton() {
+      this.$emit('show-button')
+    }
   }
 };
 </script>
 
 <style>
 /* Terminal */
-
 .fakeButtons {
   width: 10%;
   display: flex;
@@ -60,7 +65,6 @@ export default {
 }
 
 .fakeMenu {
-  width: 80%;
   height: 35px;
   background-color: #bbb;
   margin: 0 auto;
@@ -74,7 +78,6 @@ export default {
 .fakeScreen {
   background-color: #151515;
   box-sizing: border-box;
-  width: 80%;
   margin: 0 auto;
   padding: 20px;
   border-bottom-left-radius: 5px;
@@ -88,6 +91,7 @@ export default {
   -moz-animation: type .5s 1s steps(20, end) forwards;
   -o-animation: type .5s 1s steps(20, end) forwards;
   animation: type .5s 1s steps(20, end) forwards;
+  overflow-wrap: anywhere;
 }
 
 .cursor {

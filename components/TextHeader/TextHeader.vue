@@ -1,9 +1,9 @@
 <template lang="pug">
   v-container(:class="{'align-center': $vuetify.breakpoint.smAndDown}")
-    h1.text-left(:class="{'text-center' : side, 'primary-border': color, 'white--text': white}") {{ blabla.title }}
+    h1(:class="{'primary-border': color, 'white--text': white, 'side-right': side === 'right', 'side-center': side === 'center'}" :style="{textAlign: side + '!important'}") {{ blabla.title }}
     br
-    h3(:class="{'text-center' : side, 'primary--text': color}") {{ blabla.teaser }}
-    p.subtitle-1(:class="{'text-justify' : side}") {{ blabla.text }}
+    h3(:class="{'primary--text': color }" :style="{'text-align': side}") {{ blabla.teaser }}
+    p.subtitle-1.text-justify(:style="{textAlign: side + '!important'}") {{ blabla.text }}
     slot
 </template>
 
@@ -11,7 +11,10 @@
 export default {
   props: {
     blabla: Object,
-    side: Boolean,
+    side: {
+      type: String,
+      default: 'left'
+    },
     color: Boolean,
     white: Boolean
   }
@@ -36,10 +39,19 @@ export default {
     border-bottom: 0.1rem solid #234A5D !important;
   }
 
-  h1.text-center:after {
+  h1.side-center:after {
     content: "";
     display: block;
     margin: 2rem auto 1rem;
+    height: 10px;
+    width: 65px;
+    border-bottom: 0.1rem solid #d8d8d8;
+  }
+
+  h1.side-right:after {
+    content: "";
+    display: block;
+    margin: 2rem 0 1rem auto;
     height: 10px;
     width: 65px;
     border-bottom: 0.1rem solid #d8d8d8;

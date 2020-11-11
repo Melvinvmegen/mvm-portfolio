@@ -1,10 +1,11 @@
 <template lang="pug">
   .header
-    v-container.col-md-9.col-11.justify-center(:class="{'header-container' : !contact }")
-      FakeTerminal(v-if="$route.name === 'backEnd'")
-      TextHeader(:blabla="blabla" :side="$vuetify.breakpoint.smAndDown" v-else)
+    v-container.col-md-10.col-12.justify-center(:class="{'header-container' : !contact }")
+      FakeTerminal(v-if="$route.name === 'backEnd'" @show-button="showButton = true")
+        CTA(v-if="showButton" :className="true" color="accent" :text="ctaText" :link="link" :side="side")
+      TextHeader(:blabla="blabla" :side="side" v-else)
         br
-        CTA(v-if="ctaText && link" :className="true" color="accent" :text="ctaText" :link="link")
+        CTA(v-if="ctaText && link" :className="true" color="accent" :text="ctaText" :link="link" :side="side")
 </template>
 
 <script>
@@ -22,7 +23,13 @@ export default {
     blabla: Object,
     ctaText: String,
     link: String,
-    contact: Boolean
+    contact: Boolean,
+    side: String
+  },
+  data() {
+    return {
+      showButton: false
+    }
   }
 };
 </script>

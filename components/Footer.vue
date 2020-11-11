@@ -1,12 +1,12 @@
 <template lang="pug">
-  v-card.flex(height="375")
+  v-card.footer.flex(height="399")
     v-footer(dark='' padless='' absolute)
       v-card.primary.white--text.flex(flat='' tile='')
         v-card-title.primary.white--text
           v-container.d-flex.flex-row(:class="{'flex-column': $vuetify.breakpoint.smAndDown, 'align-center': $vuetify.breakpoint.smAndDown}")
             Logo(color='white')
-            .d-flex.justify-space-around.col-9
-              div(v-for="link in links" :key="link.id")
+            .d-flex.justify-space-around.col-md-9.col-12.flex-wrap
+              .footer-list.d-flex.flex-column.align-center.col-sm-4.col-6(v-for="link in links" :key="link.id")
                 h4.v-list-item {{ link.title }}
                 ul
                   v-list-item(v-for="sublink in link.sublinks" :key='sublink.id')
@@ -73,6 +73,8 @@ export default {
 </script>
 
 <style scoped>
+
+
   .icons {
     display: flex;
     justify-content: space-around;
@@ -85,5 +87,24 @@ export default {
 
   ul .v-list-item {
     font-size: 16px;
+  }
+
+  @media only screen and (max-width: 960px) {
+    .footer {
+      height: 558px !important;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .footer {
+      height: 822px !important;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .footer-list:last-child {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
   }
 </style>

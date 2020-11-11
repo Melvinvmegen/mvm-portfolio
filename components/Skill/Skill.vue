@@ -5,7 +5,7 @@
     v-card.inner-card
       img(height='150' :src="require(`~/assets/${folder}/${skill.img}`)")
       v-card-title {{ skill.name }}
-      v-card-text.white--text
+      v-card-text.primary--text
         v-row.justify-space-between.mx-0(align='center')
           .d-flex
             v-rating(:value='skill.rating' color='amber' background-color="grey lighten-2" dense='' half-increments='' readonly='' size='14')
@@ -15,7 +15,7 @@
           | {{ skill.description }}
       hr.separator
       v-card-actions
-        v-btn.white--text(text to='/contact')
+        v-btn.primary--text(text to='/contact')
           | Alors on discute ?
 </template>
 
@@ -46,12 +46,12 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(180deg, rgba(42,95,121,1) 40%, rgba(246,80,74,1) 100%) !important;
-    color: white !important;
+    background: white !important;
+    color: #234A5D !important;
   }
 
   .separator {
-    border: 1px solid white;
+    border: 1px solid #234A5D;
     width: 20%;
   }
 </style>

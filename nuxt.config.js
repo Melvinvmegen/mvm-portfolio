@@ -50,7 +50,7 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'https://melvinvmegen.netlify.app/'
+    baseURL: 'https://mvm-db.herokuapp.com/'
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)

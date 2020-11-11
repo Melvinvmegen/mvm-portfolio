@@ -1,7 +1,7 @@
 <template lang="pug">
   .full
     v-container
-      TextHeader(:blabla="{title: title, teaser: teaser}" :side="true" :color="true")
+      TextHeader(:blabla="{title: title, teaser: teaser}" side="center" :color="true")
       Tags(:tags="tags")
       v-img(:src="require(`~/assets/projects/${img}`)" contain)
       .pb-15.pt-15
@@ -23,14 +23,14 @@ export default {
   },
   data() {
     return {
-      title: this.$route.params.item.title,
-      teaser: this.$route.params.item.teaser,
-      desc: this.$route.params.item.desc,
-      img: this.$route.params.item.img,
-      alt: this.$route.params.item.alt,
-      href: this.$route.params.item.href,
-      btnText: this.$route.params.item.btnText,
-      tags: this.$route.params.item.tags
+      title: this.$route.params.project.title,
+      teaser: this.$route.params.project.teaser,
+      desc: this.$route.params.project.desc,
+      img: this.$route.params.project.img,
+      alt: this.$route.params.project.alt,
+      href: this.$route.params.project.href,
+      btnText: this.$route.params.project.btnText,
+      tags: this.$route.params.project.tags
     }
   }
 }

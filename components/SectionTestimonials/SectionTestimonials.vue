@@ -1,5 +1,5 @@
 <template lang="pug">
-  .section-testimonial
+  .section-testimonial(:style="$route.name === 'contact' && $vuetify.breakpoint.smAndDown ? 'margin-top: 50vh;' : 'margin-top: 0;'")
     .section-main-testimonials
       .section-title.text-center
         h2.title-bold.primary--text ILS M'ONT FAIT CONFIANCE
@@ -66,7 +66,7 @@ export default {
     align-items: center;
     flex-direction: column;
     padding-top: 10%;
-    min-height: 800px;
+    min-height: 900px;
   }
 
   .section-testimonials {
@@ -83,10 +83,6 @@ export default {
   @media (max-width: 768px) {
     .testimonials-list {
       justify-content: space-evenly;
-    }
-
-    .testimonials-content {
-      padding: 0;
     }
 
     .testimonials {
@@ -112,14 +108,23 @@ export default {
     }
   }
 
-  @media (max-width: 500px) {
-    .testimonial-quote {
-      font-size: 16px;
-      line-height: 2.5;
+  @media (max-width: 600px) {
+    .section-main-testimonials {
+      min-height: 1000px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .section-main-testimonials {
+      min-height: 1100px;
     }
   }
 
   @media (max-width: 375px) {
+    .section-title {
+      margin-bottom: 0 !important;
+    }
+
     .testimonials-slide {
       margin: 0 20px;
     }
@@ -127,9 +132,7 @@ export default {
     .testimonial-infos {
       height: 80px;
     }
-    .section-main-testimonials {
-      padding-top: 50px
-    }
+
     .testimonial-quote blockquote {
       text-align: center;
       font-size: 15px;

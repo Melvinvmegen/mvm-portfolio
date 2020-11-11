@@ -1,12 +1,13 @@
 <template lang="pug">
   .full
     .d-flex
-      Banner(:blabla='BannerBlabla' :contact="true")
+      Banner(:blabla='BannerBlabla' :contact="true", :image="image")
     SectionTestimonials
 </template>
 
 <script>
 import SectionTestimonials from "~/components/SectionTestimonials/SectionTestimonials";
+import img from "~/assets/contact/contact.png";
 
 export default {
   name: "Contact",
@@ -19,7 +20,10 @@ export default {
         title: "Hello, on discute ?",
         teaser: "Vous avez des questions ?",
         text: "Sed nec magna sed augue tempor iaculis a in sapien. Aenean dapibus felis enim, vel efficitur dui posuere at. Donec purus odio, posuere nec posuere sit amet, commodo ut erat. Donec et erat nibh. Pellentesque diam diam, congue vel aliquet ac, pretium non neque. Phasellus consectetur dui sed ligula dictum mollis ac eu mi. Praesent aliquam metus a augue tempor commodo. Cras venenatis, dui a eleifend blandit, dui nunc ullamcorper dolor, sit amet rutrum velit metus non erat."
-      }
+      },
+      image: img,
+      ctaText: "Découvrez mes projets",
+      link: "/projets",
     };
   }
 };
@@ -78,11 +82,6 @@ export default {
     height: 100% !important;
   }
 
-  .header-right {
-    width: 100% !important;
-    min-height: 100vh !important;
-  }
-
   .header {
     margin: 0 !important;
   }
@@ -90,17 +89,6 @@ export default {
   .contact-container {
     width: 90% !important;
     left: 0 !important;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .section-home {
-    height: 100% !important;
-  }
-
-  .header-right {
-    min-height: 800px;
-    max-height: 100% !important;
   }
 }
 </style>

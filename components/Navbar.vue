@@ -16,12 +16,13 @@
         v-icon.float-right.mr-4.mt-4(@click.stop="drawer = false") mdi-close
         br
         v-list(nav='' dense='')
-          v-list-item-group(active-class='deep-purple--text text--accent-4')
-            v-list-item(v-for='item in navItems' :key='item.title' :to='item.link' two-line exact)
+          v-list-item-group
+            v-list-item.nav-anim(v-for='item in navItems' :key='item.title' :to='item.link' two-line exact)
               v-list-item-icon.align-self-center
                 v-icon {{ item.icon }}
               v-list-item-content
                 v-list-item-title {{ item.title }}
+              span.line.-bottom
             v-divider
             br
             v-list-item.d-flex(:class="{'flex-column': $vuetify.breakpoint.smAndDown}")

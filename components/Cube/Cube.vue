@@ -1,18 +1,18 @@
 <template lang="pug">
   .scene
-    .cube(:class="{'show-right': scrollPosition > 1200 && scrollPosition > 1400, 'show-top':  scrollPosition > 1700 && scrollPosition < 2300, 'show-left': scrollPosition > 2300, 'show-bottom':  scrollPosition > 2700}")
-      .cube__face.cube__face--front(:class="{'drop-face-flat': scrollPosition > 3150}")
+    .cube(v-if="arrPositions" :class="{'show-right': scrollPosition > arrPositions[0], 'show-top':  scrollPosition > arrPositions[1] && scrollPosition < arrPositions[2], 'show-left': scrollPosition > arrPositions[2], 'show-bottom':  scrollPosition > arrPositions[3]}")
+      .cube__face.cube__face--front(:class="{'drop-face-flat': dropFaceValue}")
         img(:src="require(`~/assets/${folder}/${faceImgs[0]}`)" width="150px")
-      .cube__face.cube__face--back(:class="{'drop-face-flat': scrollPosition > 3150}")
-        img(:src="require(`~/assets/${folder}/${faceImgs[0]}`)" width="150px" v-if="scrollPosition > 1400")
-      .cube__face.cube__face--right(:class="{'drop-face-right': scrollPosition > 3150}")
-        img(:src="require(`~/assets/${folder}/${faceImgs[1]}`)" width="150px" v-if="scrollPosition < 2300 || scrollPosition > 2700")
-      .cube__face.cube__face--left(:class="{'drop-face-left': scrollPosition > 3150}")
-        img(:src="require(`~/assets/${folder}/${faceImgs[2]}`)" width="150px" v-if="scrollPosition < 1400 || scrollPosition > 1700")
-      .cube__face.cube__face--top(:class="{'drop-face-bottom': scrollPosition > 3150}")
-        img(:src="require(`~/assets/${folder}/${faceImgs[3]}`)" width="150px" v-if="scrollPosition < 2700")
-      .cube__face.cube__face--bottom(:class="{'drop-face-front': scrollPosition > 3150}")
-        img(:src="require(`~/assets/${folder}/${faceImgs[4]}`)" width="150px" v-if="scrollPosition < 1700 || scrollPosition > 2300")
+      .cube__face.cube__face--back(:class="{'drop-face-flat': dropFaceValue}")
+        img(:src="require(`~/assets/${folder}/${faceImgs[0]}`)" width="150px")
+      .cube__face.cube__face--right(:class="{'drop-face-right': dropFaceValue}")
+        img(:src="require(`~/assets/${folder}/${faceImgs[1]}`)" width="150px")
+      .cube__face.cube__face--left(:class="{'drop-face-left': dropFaceValue}")
+        img(:src="require(`~/assets/${folder}/${faceImgs[2]}`)" width="150px")
+      .cube__face.cube__face--top(:class="{'drop-face-bottom': dropFaceValue}")
+        img(:src="require(`~/assets/${folder}/${faceImgs[3]}`)" width="150px")
+      .cube__face.cube__face--bottom(:class="{'drop-face-front': dropFaceValue}")
+        img(:src="require(`~/assets/${folder}/${faceImgs[4]}`)" width="150px")
 </template>
 
 <script>
@@ -20,7 +20,14 @@ export default {
   props: {
     scrollPosition: Number,
     faceImgs: Array,
-    folder: String
+    folder: String,
+    arrPositions: Array
+  },
+  computed: {
+    dropFaceValue() {
+      const additionalValue = this.$vuetify.breakpoint.smAndUp ? 0 : 200
+      return this.scrollPosition > this.arrPositions[4] + additionalValue
+    }
   }
 }
 </script>
@@ -29,7 +36,7 @@ export default {
   .scene {
     width: 200px;
     height: 200px;
-    margin: 0px 80px;
+    margin: auto;
     perspective: 400px;
   }
 
@@ -57,7 +64,7 @@ export default {
     justify-content: center;
     border-radius: 8%;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2) !important;
-    background-color: rgba(255, 255, 255, .15) !important;
+    background-color: white !important;
   }
 
   .cube__face--front  { 
@@ -114,5 +121,48 @@ export default {
   .drop-face-flat {
     transform: translateZ(-300px);
     transition: transform 2s ease-in-out;
+  }
+
+  @media (max-width: 1200px) {
+    .cube {
+      transform: translateZ(-200px);
+    }
+    .cube.show-front  { transform: translateZ(-200px) rotateY(   0deg); }
+    .cube.show-right  { transform: translateZ(-200px) rotateY( -90deg); }
+    .cube.show-back   { transform: translateZ(-200px) rotateY(-180deg); }
+    .cube.show-left   { transform: translateZ(-200px) rotateY(  90deg); }
+    .cube.show-top    { transform: translateZ(-200px) rotateX( -90deg); }
+    .cube.show-bottom { transform: translateZ(-200px) rotateX(  90deg); }
+  }
+
+  @media (max-width: 600px) {
+    .cube {
+      transform: translateZ(-300px);
+    }
+    .cube.show-front  { transform: translateZ(-300px) rotateY(   0deg); }
+    .cube.show-right  { transform: translateZ(-300px) rotateY( -90deg); }
+    .cube.show-back   { transform: translateZ(-300px) rotateY(-180deg); }
+    .cube.show-left   { transform: translateZ(-300px) rotateY(  90deg); }
+    .cube.show-top    { transform: translateZ(-300px) rotateX( -90deg); }
+    .cube.show-bottom { transform: translateZ(-300px) rotateX(  90deg); }
+  }
+
+  @media (max-width: 400px) {
+    .scene {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      perspective: 200px;
+    }
+
+    .cube {
+      transform: translateZ(-350px);
+    }
+    .cube.show-front  { transform: translateZ(-350px) rotateY(   0deg); }
+    .cube.show-right  { transform: translateZ(-350px) rotateY( -90deg); }
+    .cube.show-back   { transform: translateZ(-350px) rotateY(-180deg); }
+    .cube.show-left   { transform: translateZ(-350px) rotateY(  90deg); }
+    .cube.show-top    { transform: translateZ(-350px) rotateX( -90deg); }
+    .cube.show-bottom { transform: translateZ(-350px) rotateX(  90deg); }
   }
 </style>

@@ -1,17 +1,13 @@
 <template lang="pug">
-  .section.section-gallery
+  .section-gallery
     a.section-anchor(id='Mes-Projets')
     .section-slide
-      .section-title
-        h2.title-bold.text-center MES PROJETS
-        h3.featured-item-subheader.italic.text-center Découvrez un exemple concret de tout ce qui précède
-      v-carousel(height=700)
-        v-carousel-item(v-for="(item, i) in items" :key='i' delimiter-icon="mdi-minus" show-arrows="true" next-icon="true, fas fa-arrow-right")
-          .d-flex(class='flex-col-reverse xl:flex-row')
-            CarouselContent(:title="item.title", :desc="item.desc", :text="item.btnText", :href="item.href" :tags="item.tags")
-            v-flex(flex class="flex col-12 col-lg-8")
-              v-img.fill-height(:src="item.img" :alt="item.alt" :href="item.href" contain)
-
+      TextHeader(:blabla="textHeader" side="center" :white="true")
+      .d-flex.flex-wrap.justify-center
+        v-flex.col-10.col-lg-6.mb-12(v-for="item in items" :key='item.title')
+          ProjectCard(:project="item")
+      .d-flex.justify-center
+        CTA(v-if="ctaText && link" :className="true" color="accent" :text="ctaText" :link="link")
 </template>
 
 <script>
@@ -21,18 +17,28 @@ import ThomasKrief from '~/assets/projects/thomaskrief.png'
 import SecuryGard from '~/assets/projects/Securygard.png'
 import ReflexOsteo from '~/assets/projects/Reflex_osteo.png'
 import TimePass from '~/assets/projects/Timepass.png'
+import ProjectCard from '~/components/ProjectCard/ProjectCard'
 
 export default {
   components: {
-    CarouselContent
+    CarouselContent,
+    ProjectCard
   },
   data () {
     return {
+      ctaText: "Découvrez tous mes projets",
+      link: "/projets",
+      textHeader: {
+        title: "MES DERNIERS PROJETS",
+        teaser: "Découvrez un exemple concret de tout ce qui précède",
+        text: ''
+      },
       items: {
         reflexosteo: {
           title: 'REFLEX OSTEO',
+          teaser: 'Site de mise en relation entre ostéopathe et patient',
           desc: "Site de mise en relation entre ostéopathe et patient. Totalisant jusqu'ici 4 mois de travail avec différentes missions, tel que l'implementation de commentaires sur des articles de blog, la création d'un hub blog avec système de recherche (auparavant wordpress), l'amélioration des performances sur mobile, un système de mise en avant des meilleurs ostéopathes en fonction de leurs recommandations, mise en place de téléconsultation et bien d'autres...",
-          img: ReflexOsteo,
+          img: 'Reflex_osteo.png',
           alt: 'REFLEX OSTEO',
           href: 'https://www.reflexosteo.com/',
           btnText: '► Se rendre sur le site',
@@ -48,8 +54,9 @@ export default {
         },
         tpass: {
           title: 'TIME PASS',
+          teaser: "Site de mise en relation entre expert et personnes ayant besoin d'aide dans un domaine spécifique",
           desc: "Site de mise en relation entre expert et personnes ayant besoin d'aide dans un domaine spécifique. Mise en place d'un système de chat à l'attribution d'une mission, d'un système de recherche d'expert par tags, gestion de l'affection et de l'échange de la monnaie virtuelle : le tpass et implémentation de la charte graphique.",
-          img: TimePass,
+          img: 'Timepass.png',
           alt: 'Time Pass',
           href: 'https://timepasse.herokuapp.com/',
           btnText: '► Se rendre sur le site',
@@ -64,10 +71,11 @@ export default {
           ]
         },
         securygard: {
-          title: 'SECURyGARD',
+          title: 'SECURYGARD',
+          teaser: 'SecuryGard, entreprise de sécurité située à Valence',
           desc: "Projet de création d'une application Web de gestion de base de données clients avec partage de documents sécurisés entre administrateurs et utilisateurs, création dynamique de contrats (format pdf) et distribution et remplissage d'enquête clients. Création et mise en place de la charte graphique.",
-          img: SecuryGard,
-          alt: 'SECURyGARD',
+          img: 'Securygard.png',
+          alt: 'SECURYGARD',
           href: 'https://serene-falls-79228.herokuapp.com/',
           btnText: '► Se rendre sur le site',
           tags: [
@@ -78,37 +86,6 @@ export default {
             { id: 5, name: 'Ruby on Rails' },
             { id: 6, name: 'PostGreSQL' },
             { id: 7, name: 'Heroku' }
-          ]
-        },
-        thomaskrief: {
-          title: 'THOMAS KRIEF',
-          desc: "Projet de création d'un site vitrine pour l'ancien skieur professionnel et nouvel artiste : Thomas Krief. L'objectif rechercher, mettre en avant ses dernières créations et inviter les visiteurs à se rediriger vers son compte Artmajeur pour acceder à toute sa collection.",
-          img: ThomasKrief,
-          alt: 'THOMAS KRIEF',
-          href: 'http://www.thomaskrief.fr/',
-          btnText: '► Se rendre sur le site',
-          tags: [
-            { id: 1, name: 'HTML5' },
-            { id: 2, name: 'CSS3' },
-            { id: 3, name: 'Javascript' },
-            { id: 4, name: 'React.js' },
-            { id: 5, name: 'Netlify' }
-          ]
-        },
-        mindseed: {
-          title: 'MINDSEED',
-          desc: "Projet de deux semaines réalisé au cours du Bootcamp proposé par la formation de développeur web Full-Stack, le Wagon. Nous avons créé un site d'aide à l'apprentissage avec un système de flashcards poussé. Celui-ci est à destination des étudiants, professeurs ou simple curieux avare d'apprentissage.",
-          img: Mindseed,
-          alt: 'MINDSEED',
-          href: 'https://www.mindseed.app/',
-          btnText: '► Se rendre sur le site',
-          tags: [
-            { id: 1, name: 'HTML5' },
-            { id: 2, name: 'CSS3' },
-            { id: 3, name: 'Javascript' },
-            { id: 6, name: 'Ruby' },
-            { id: 7, name: 'Ruby on Rails' },
-            { id: 9, name: 'Heroku' }
           ]
         }
       }
@@ -121,6 +98,12 @@ export default {
   .section-gallery {
     background: #254A5D;
     min-height: 1200px !important;
+    width: 100%;
+    display: flex;
+    min-height: 90vh;
+    position: relative;
+    align-items: center;
+    z-index: 2;
   }
 
   .section-slide {
@@ -230,54 +213,12 @@ export default {
     .tag-list {
       padding-right: 0 !important;
     }
-
-    .v-carousel__controls {
-      bottom: 0;
-      width: 100% !important;
-    }
-  }
-  @media (max-width: 1024px) {
-    .v-window, .v-carousel__item {
-      height: 820px!important;
-    }
   }
 
-  @media (max-width: 640px) {
-    .v-window__next, .v-window__prev {
-      top: 35% !important;
+  @media (max-width: 769px) {
+    .section-gallery {
+      min-height: 1000px !important;
+      align-items: flex-start;    
     }
   }
-
-  @media (max-width: 540px) {
-    .v-window__next, .v-window__prev {
-      top: 30% !important;
-    }
-  }
-
-  @media (max-width: 450px) {
-    .v-window__next, .v-window__prev {
-      top: 25% !important;
-    }
-  }
-
-  @media (max-width: 400px) {
-    .v-window__next, .v-window__prev {
-      top: 20% !important;
-    }
-
-    .section-title {
-      margin-bottom: 20px;
-    }
-
-    .v-window, .v-carousel__item {
-      height: 950px!important;
-    }
-  }
-
-  @media (max-width: 375px) {
-    .v-window__next, .v-window__prev {
-      margin: 0!important;
-    }
-  }
-
 </style>
