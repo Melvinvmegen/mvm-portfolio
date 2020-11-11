@@ -1,7 +1,7 @@
 <template lang="pug">
   .full
     .d-flex
-      Banner(:blabla='BannerBlabla' :contact="true", :image="image")
+      Banner(:blabla='BannerBlabla' :contact="true", :image="image", :ctaText="ctaText" :link="link")
     SectionTestimonials
 </template>
 
@@ -22,8 +22,8 @@ export default {
         text: "Sed nec magna sed augue tempor iaculis a in sapien. Aenean dapibus felis enim, vel efficitur dui posuere at. Donec purus odio, posuere nec posuere sit amet, commodo ut erat. Donec et erat nibh. Pellentesque diam diam, congue vel aliquet ac, pretium non neque. Phasellus consectetur dui sed ligula dictum mollis ac eu mi. Praesent aliquam metus a augue tempor commodo. Cras venenatis, dui a eleifend blandit, dui nunc ullamcorper dolor, sit amet rutrum velit metus non erat."
       },
       image: img,
-      ctaText: "Découvrez mes projets",
-      link: "/projets",
+      ctaText: "Ou contactez-moi sur Malt",
+      link: "https://www.malt.fr/profile/melvinvanmegen",
     };
   }
 };
