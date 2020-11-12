@@ -62,6 +62,7 @@ export default {
           sublinks: [
             { id: 9, name: 'SEO' },
             { id: 10, name: 'SEA' },
+            { id: 11, name: 'Email marketing' },
             { id: 12, name: 'Marketing de contenu' }
           ]
         }

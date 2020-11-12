@@ -54,4 +54,16 @@ export default {
     border: 1px solid #234A5D;
     width: 20%;
   }
+
+  @media only screen and (max-width: 1265px) {
+    .inner-card {
+      min-height: 500px;
+    }
+  }
+
+  @media only screen and (max-width: 960px) {
+    .inner-card {
+      min-height: unset;
+    }
+  }
 </style>
