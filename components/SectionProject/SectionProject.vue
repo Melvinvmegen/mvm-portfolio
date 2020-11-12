@@ -35,7 +35,7 @@ export default {
       },
       items: {
         reflexosteo: {
-          title: 'REFLEX OSTEO',
+          title: 'REFLEXOSTEO',
           teaser: 'Site de mise en relation entre ostéopathe et patient',
           desc: "Site de mise en relation entre ostéopathe et patient. Totalisant jusqu'ici 4 mois de travail avec différentes missions, tel que l'implementation de commentaires sur des articles de blog, la création d'un hub blog avec système de recherche (auparavant wordpress), l'amélioration des performances sur mobile, un système de mise en avant des meilleurs ostéopathes en fonction de leurs recommandations, mise en place de téléconsultation et bien d'autres...",
           img: 'Reflex_osteo.png',

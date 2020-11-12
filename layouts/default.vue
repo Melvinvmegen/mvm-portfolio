@@ -27,8 +27,7 @@ export default {
       ],
       socialLinks: [
         { id: 1, icon: 'mdi-linkedin', href: 'https://www.linkedin.com/in/melvin-van-megen/' },
-        { id: 2, icon: 'mdi-twitter', href: '' },
-        { id: 3, icon: 'mdi-skype', href: '' },
+        { id: 2, icon: 'mdi-mail', href: 'mailto:melvin.vmegen@gmail.com' },
         { id: 4, icon: 'mdi-github', href: 'https://github.com/Melvinvmegen' }
       ]
     }
@@ -55,5 +54,9 @@ export default {
 
   .v-application a {
     text-decoration: none !important;
+  }
+
+  .theme--light.v-btn:hover::before {
+    opacity: 0;
   }
 </style>
