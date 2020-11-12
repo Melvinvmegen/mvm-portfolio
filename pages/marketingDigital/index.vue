@@ -33,8 +33,7 @@
         TextHeader(:blabla="textHeader" side="center" :color="true")
         .col-lg-8.col-11.logo-list
           .d-flex.flex-wrap
-            .col-md-4.col-sm-6.col-12.company-logo(v-for="company in companies" :key="company.name")
-              img.company-logo(:src="require(`~/assets/companies/${company.src}`)" :alt="company.name")
+            CompanyLogo(v-for="company in companies" :company="company")
 </template>
 
 <script>
@@ -100,23 +99,6 @@ export default {
   max-height: 100px;
   margin: auto;
   display: block;
-}
-
-.logo-list {
-    margin: 5rem auto;
-}
-
-.company-logo {
-  display: block;
-  margin: 0 auto;
-  filter: grayscale(100%);
-  opacity: .5;
-  transition: all .25s ease;
-}
-
-.company-logo:hover {
-  filter: grayscale(0);
-  opacity: 1;
 }
 
 .surrounded-text {
