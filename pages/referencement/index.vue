@@ -24,10 +24,9 @@
       v-container
         TextHeader(:blabla="{title: 'Mes certifications', teaser: 'Et leurs notations pas du tout exagéré et souvent approuvé par 100 personnes'}" side="center" :color="true")
         br
-        .d-flex.flex-wrap
-          .block.col-md-3.col-sm-6.col-12.d-flex.justify-center.align-center.p-5(v-for="certif in certifications")
-            .inner-certif
-              img(:src="require(`~/assets/referencement/${certif}.png`)")
+        .d-flex.flex-wrap.justify-center.certif-list
+          .col-md-3.col-sm-6.col-12.d-flex.justify-center.align-center.certif-logo(v-for="certif in certifications")
+            img(:src="require(`~/assets/referencement/${certif}.png`)")
     .section-sm.flex-column.white--text
       v-container
         TextHeader(:blabla="textHeader" side="center" :color="true")
@@ -68,7 +67,9 @@ export default {
         'ahrefs',
         'google-ads',
         'google-analytics',
-        'google-tag-manager'
+        'google-tag-manager',
+        'kedge',
+        'semrush'
       ],
       companies: [
         { 
@@ -86,9 +87,8 @@ export default {
         { 
           name: "Platon formation",
           src: "platonformation.png"
-        },
+        }      
       ]
-      
     };
   },
 }
@@ -114,13 +114,27 @@ export default {
   justify-content: center;
 }
 
-.inner-certif {
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 12px 16px, rgba(0, 0, 0, 0.04) 0px 0px 8px;
-  border-radius: 8px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.certif-list {
+  margin: 5rem auto;
+}
+
+.certif-logo {
+  filter: grayscale(100%);
+  opacity: .5;
+}
+
+.certif-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .certif-logo {
+    margin: 10px auto;
+  }
+
+  .certif-list {
+    margin: 2rem auto;
+  }
 }
 </style>

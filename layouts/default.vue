@@ -41,6 +41,10 @@ export default {
     font-family: Montserrat,BuenosAires,sans-serif;
   }
 
+  .v-application {
+    font-family: Montserrat,BuenosAires,sans-serif;
+  }
+
   .v-list-item--active::before {
     opacity: 0 !important;
   }

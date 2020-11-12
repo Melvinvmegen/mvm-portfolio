@@ -25,11 +25,13 @@
             v-divider
             br
             .d-flex.justify-center.align-center(:class="{'flex-column': $vuetify.breakpoint.smAndDown}")
-              h3 Retrouvez moi sur
+              h3.primary--text MELVINVMEGEN
+              a(href="mailto:melvin.vmegen@gmail.com") melvin.vmegen@gmail.com
+              a(href="+33764470724") 07 64 47 07 24
               .icons 
                 v-btn(v-for='link in socialLinks' :key='link.id' icon='')
                   a.icon-link(:href="link.href")
-                    v-icon(size='20px' color="#234A5D")
+                    v-icon(size='20px' color="#000")
                       | {{ link.icon }}
 
 </template>
@@ -121,6 +123,10 @@ aside .v-navigation-drawer__content {
     position: relative;
     cursor: pointer;
     text-decoration: none;
+  }
+
+  .nav-anim a .v-list-item__content .v-list-item__title {
+    font-weight: 600;
   }
 
   .nav-anim a .text {
