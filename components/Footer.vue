@@ -14,7 +14,7 @@
             v-spacer
             .icons.col-2
               v-btn.white--text(v-for='link in socialLinks' :key='link.id' icon='')
-                a(:href="link.link")
+                a(:href="link.href")
                   v-icon.white--text(size='24px')
                     | {{ link.icon }}
         v-divider
