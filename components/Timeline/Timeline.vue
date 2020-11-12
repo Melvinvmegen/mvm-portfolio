@@ -51,12 +51,10 @@ export default {
       this.$nextTick(function() {
         const arr = this.$vuetify.breakpoint.smAndUp ? [...this.$refs['items-left'], ...this.$refs['items-right']] : [...this.$refs['items']] 
         const posArr = []
-        console.log(this.arrPositions)
         for (const ar of arr) {
           let item = ar.$el.getBoundingClientRect()
           posArr.push((item.top))
         }
-        console.log(posArr)
         this.arrPositions = posArr.sort(function(a, b) {
           return a - b;
         })
