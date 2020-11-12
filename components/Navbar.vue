@@ -17,7 +17,7 @@
         br
         v-list(nav='' dense='')
           v-list-item-group
-            v-list-item.nav-anim(v-for='item in navItems' :key='item.title' :to="{name: item.link}" two-line exact)
+            v-list-item.nav-anim(v-for='item in navItems' :key='item.title' two-line exact)
               nuxt-link(:to="{name: item.link}")
                 v-list-item-content
                   v-list-item-title.ml-4 {{ item.title }}
