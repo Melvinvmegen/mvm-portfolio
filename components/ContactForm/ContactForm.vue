@@ -43,7 +43,7 @@
       @blur="$v.contactData.query.$touch()"
       :class="{ 'error--text': $v.contactData.query.$error }"
       )
-      .d-flex
+      .d-flex.justify-center
         .form-button.my-2.mr-2
           v-btn(color='success' :disabled="$v.$invalid" @click.prevent="onSubmit" ref="button")
             | Prendre contact
