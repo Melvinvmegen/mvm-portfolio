@@ -11,7 +11,7 @@
     .section-sm.secondary.flex-column.white--text
       v-container
         TextHeader(:blabla="{title: 'Un résumé de ma Stack Back-End', teaser: 'Et leurs notations pas du tout exagéré et souvent approuvé par 100 personnes'}" side="center" :color="true")
-        .d-flex.flex-wrap(data-aos="fade-down")
+        .d-flex.flex-wrap(data-aos="fade-down" data-aos-once="true")
           .col-md-4.col-12(v-for="skill in skills" :id="skill.name")
             Skill(:skill="skill" folder="back")
 

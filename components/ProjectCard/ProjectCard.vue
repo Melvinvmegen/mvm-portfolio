@@ -1,6 +1,6 @@
 <template lang="pug">
   nuxt-link(:to="{ name: 'projets-name', params: { name: project.title, project: project }}")
-    v-img.project-img(:src="require(`~/assets/projects/${project.img}`)" :alt="project.alt" :href="project.href" data-aos="zoom-in")
+    v-img.project-img(:src="require(`~/assets/projects/${project.img}`)" :alt="project.alt" :href="project.href" data-aos="zoom-in" data-aos-once="true")
       .img-text
         h2.title-project {{ project.title }}
         p.teaser-project {{ project.teaser }}
