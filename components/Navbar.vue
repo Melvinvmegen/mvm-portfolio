@@ -25,7 +25,7 @@
             v-divider
             br
             .d-flex.justify-center.align-center(:class="{'flex-column': $vuetify.breakpoint.smAndDown}")
-              h3 Melvinvmegen
+              h3 MELVINVMEGEN
               a(href="mailto:melvin.vmegen@gmail.com") melvin.vmegen@gmail.com
               a(href="+33764470724") 07 64 47 07 24
               .icons 
