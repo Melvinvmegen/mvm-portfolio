@@ -8,7 +8,7 @@
       TextHeader(:blabla="{title: 'Ma méthodologie'}" side="center" :white="true")
       .d-flex.flex-wrap.container
         .block.col-md-4.col-sm-12(v-for="step in steps" :key="step.id" :class="{'text-center': $vuetify.breakpoint.smAndDown}")
-          img.step-img(:src="require(`~/assets/marketing-digital/${step.image}.png`)")
+          img.step-img(:src="require(`~/assets/referencement/${step.image}.png`)")
           h3.d-flex(:class="{'align-center justify-center': $vuetify.breakpoint.smAndDown}")
             strong.surrounded-text.mr-2 {{ step.id }}
             | {{ step.name }}
@@ -27,7 +27,7 @@
         .d-flex.flex-wrap
           .block.col-md-3.col-sm-6.col-12.d-flex.justify-center.align-center.p-5(v-for="certif in certifications")
             .inner-certif
-              img(:src="require(`~/assets/marketing-digital/${certif}.png`)")
+              img(:src="require(`~/assets/referencement/${certif}.png`)")
     .section-sm.flex-column.white--text
       v-container
         TextHeader(:blabla="textHeader" side="center" :color="true")
@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import img from '~/assets/marketing-digital/marketingdigital.png'
+import img from '~/assets/referencement/referencement.png'
 
 export default {
   data() {

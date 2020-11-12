@@ -21,7 +21,7 @@ export default {
       navItems: [
         { id: 1, title: 'FRONT END', link: 'frontEnd' },
         { id: 2, title: 'BACK END', link: 'backEnd' },
-        { id: 3, title: 'MARKETING DIGITAL', link: 'marketingDigital' },
+        { id: 3, title: 'REFERENCEMENT', link: 'referencement' },
         { id: 4, title: 'PROJETS', link: 'projets' },
         { id: 5, title: 'CONTACT', link: 'contact' }
       ],
