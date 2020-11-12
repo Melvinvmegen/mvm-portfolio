@@ -48,4 +48,8 @@ export default {
   .theme--light.v-list-item:hover::before {
     opacity: 0 !important;
   }
+
+  .v-application a {
+    text-decoration: none !important;
+  }
 </style>
