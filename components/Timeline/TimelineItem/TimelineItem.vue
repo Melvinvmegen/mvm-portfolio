@@ -1,6 +1,6 @@
 <template lang="pug">
   .timeline-item(:class="{'left-side': left}")
-    .timeline-item-child(data-aos="fade-up")
+    .timeline-item-child(data-aos="fade-up" data-aos-once="true")
       h2 {{ timeLineItemData.title }}
       p {{ timeLineItemData.description }}
 </template>

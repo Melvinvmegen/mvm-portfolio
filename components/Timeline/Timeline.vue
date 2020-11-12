@@ -2,14 +2,14 @@
   .timeline.d-flex(v-if="$vuetify.breakpoint.smAndUp")
     .d-flex.col-sm-4.col-6.white--text
       TimelineItem(v-for="item in timeLineItemsLeft" :key="item.title" :timeLineItemData="item" ref="items-left" v-if="show")
-    .col-sm-4.col-6.js-img(data-aos="fade-down")
+    .col-sm-4.col-6.js-img(data-aos="fade-down" data-aos-once="true")
       Cube(:scrollPosition="scrollPosition" :faceImgs="faceImgs" :folder="folder" :arrPositions="arrPositions")
     .d-sm-flex.d-inline-flex.col-sm-4.col-6.white--text
       TimelineItem(v-for="item in timeLineItemsRight" :key="item.title" :timeLineItemData="item" :left="true" ref="items-right" v-if="show")
   .timeline.d-flex(v-else)
     .d-flex.col-sm-4.col-6.white--text
       TimelineItem(v-for="item in timeLineItems" :key="item.title" :timeLineItemData="item" ref="items" v-if="show")
-    .col-sm-4.col-6.js-img(data-aos="fade-down")
+    .col-sm-4.col-6.js-img(data-aos="fade-down" data-aos-once="true")
       Cube(:scrollPosition="scrollPosition" :faceImgs="faceImgs" :folder="folder" :arrPositions="arrPositions")
 </template>
 

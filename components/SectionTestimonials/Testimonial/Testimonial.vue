@@ -1,5 +1,5 @@
 <template lang="pug">
-  .testimonials-list(data-aos="animate-testimonials")
+  .testimonials-list(data-aos="animate-testimonials" data-aos-once="true")
     .testimonials-slide(class="pr-4 w-1_3" v-for="testimonial in testimonials" :key="testimonial.id")
       .slide-container.card-testimonial.testimonial
         .testimonials-content
