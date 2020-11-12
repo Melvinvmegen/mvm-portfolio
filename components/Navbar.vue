@@ -24,12 +24,13 @@
                     span.line.-bottom
             v-divider
             br
-            v-list-item.d-flex(:class="{'flex-column': $vuetify.breakpoint.smAndDown}")
+            .d-flex.justify-center.align-center(:class="{'flex-column': $vuetify.breakpoint.smAndDown}")
               h3 Retrouvez moi sur
               .icons 
-                v-btn(v-for='link in socialLinks' :key='link.id' icon='' :to='link.link')
-                  v-icon(size='20px' color="#234A5D")
-                    | {{ link.icon }}
+                v-btn(v-for='link in socialLinks' :key='link.id' icon='')
+                  a.icon-link(:href="link.href")
+                    v-icon(size='20px' color="#234A5D")
+                      | {{ link.icon }}
 
 </template>
 
@@ -109,6 +110,10 @@ aside .v-navigation-drawer__content {
 }
 
 /* NAVANIM */
+
+.icon-link {
+  text-decoration: none;
+}
 
   .nav-anim a {
     display: inline-block;
