@@ -61,7 +61,7 @@ export default {
           color: '#fff',
           reverse: true
         },
-        SectionMarketingDigital: {
+        SectionReferencement: {
           blabla: {
             id: 3, 
             title: 'MARKETEUR DIGITAL',

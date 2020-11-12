@@ -58,11 +58,10 @@ export default {
         },
         linksTra: {
           id: 3,
-          title: 'Marketing Digital',
+          title: 'Référencement',
           sublinks: [
             { id: 9, name: 'SEO' },
             { id: 10, name: 'SEA' },
-            { id: 11, name: 'Email Marketing' },
             { id: 12, name: 'Marketing de contenu' }
           ]
         }
