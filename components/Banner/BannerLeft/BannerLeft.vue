@@ -4,7 +4,6 @@
       FakeTerminal(v-if="$route.name === 'backEnd'" @show-button="showButton = true")
         CTA(v-if="showButton" :className="true" color="accent" :text="ctaText" :link="link" :side="side")
       TextHeader(:blabla="blabla" :side="side" v-else)
-        br
         CTA(v-if="ctaText && link" :className="true" color="accent" :text="ctaText" :link="link" :side="side")
 </template>
 
