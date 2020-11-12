@@ -100,7 +100,7 @@ aside .v-navigation-drawer__content {
 }
 
 .main-header-center .nav-item {
-  font-weight: 500;
+  font-weight: 600;
   width: 100%;
   justify-content: center;
   display: flex;
