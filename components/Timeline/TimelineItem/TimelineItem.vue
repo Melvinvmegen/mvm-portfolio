@@ -62,6 +62,10 @@ export default {
     .timeline-item-child {
       width: 90%;
     }
+
+    .timeline-item.left-side .timeline-item-child {
+      margin-left: 10%;
+    }
   }
 
 </style>

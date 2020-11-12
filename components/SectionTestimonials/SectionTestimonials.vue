@@ -22,21 +22,21 @@ export default {
       testimonials: [
         {
           id: 1,
-          avatar: `https://royalbrinkman.com/content/files/images/foto's/Sarah/mensen/rob.helderman@royalbrinkman.com.png`,
+          avatar: 'RobHelderman',
           name: 'Rob Helderman',
           company: `E-commerce Manager, Royal Brinkman`,
           quote: `Il prend des mesures générales visant tous les facteurs environnementaux de la partie digitale. De la gestion d'articles, CRM, aux campagnes e-mail, en passant par le référencement naturel et le SEA.`
         },
         {
           id: 2,
-          avatar: 'https://www.platonformation.com/wp-content/uploads/2019/09/jonathan-chaffenjeon.png',
+          avatar: 'JonathanChaffanjon',
           name: 'Jonathan Chaffanjon',
           company: 'Gérant, Platon Formation',
           quote: 'Sérieux et impliqué dans les projets, nous avons colloboré sur plusieurs projets dont un de référencement naturelle ( Platonformation.com ) ainsi que mon logiciel de gestion de base de données. Travail en autonomie.'
         },
         {
           id: 3,
-          avatar: 'https://pbs.twimg.com/profile_images/1180792850230992896/HNNKN0WB.jpg',
+          avatar: 'LucasJamelin',
           name: 'Lucas Jamelin',
           company: 'Label Manager, 6K RIO RECORDS',
           quote: 'Il a été de bons conseils et surtout très volontaire et force de proposition. Ses qualités stratégiques ne peuvent qu’optimiser son travail et ses rendus qui sont toujours bien ficellés et accompagnés d’une justification de ses choix toujours très pertinente.'

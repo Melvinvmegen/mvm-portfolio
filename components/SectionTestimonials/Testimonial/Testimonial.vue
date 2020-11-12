@@ -6,7 +6,7 @@
           .testimonial-infos
             .testimonial-bloc-image
               .testimonial-picture
-                img.avatar-large(:alt="testimonial.alt", :src="testimonial.avatar")
+                img.avatar-large(:alt="testimonial.alt", :src="require(`~/assets/${testimonial.avatar}.png`)")
             .testimonial-text
               p {{testimonial.name}}
               span {{testimonial.company}}
