@@ -14,6 +14,7 @@ import SectionTestimonials from "~/components/SectionTestimonials/SectionTestimo
 import img from '~/assets/homepage.png'
 import computerFront from '~/assets/computer.png'
 import computerBack from '~/assets/computer_back.png'
+import chartmarketing from '~/assets/chartmarketing.png'
 
 export default {
   components: {
@@ -69,7 +70,7 @@ export default {
             text: "Diplômé de Kedge Business School après 3 ans de formations où je me suis spécialisé dans le marketing digital. Au cours de ces 3 années, j'ai pu étendre mes compétences numériques à travers de nombreux stages et expériences. Une fois diplomé j'ai passé 2 années en tant que responsable de la transition digitale pour le département français au sein de l'entreprise, Royal Brinkman. Au cours de cette expérience j'ai appris à maîtriser le <strong>SEO</strong>, le <strong>SEA</strong> ainsi que l'email marketing à l'aide de différents outils tels que <strong>Mailchimp</strong>, Hotjar, <strong>Adwords</strong>, <strong>Google Analytics</strong>, ou encore semrush et ahrefs. Le tout avec Joomla pour CMS.",
             textColor: "#234A5D"
           },
-          sectionImage: '',
+          sectionImage: chartmarketing,,
           ctaText: 'Découvrez mon profil',
           link: 'referencement',
           color: '#D1DDE5',
