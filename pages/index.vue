@@ -14,6 +14,7 @@ import SectionTestimonials from "~/components/SectionTestimonials/SectionTestimo
 import img from '~/assets/homepage.png'
 import computerFront from '~/assets/computer.png'
 import computerBack from '~/assets/computer_back.png'
+import chartmarketing from '~/assets/chartmarketing.png'
 
 export default {
   components: {
@@ -69,7 +70,7 @@ export default {
             text: "Etudes réalisées à Kedge Business School où j'ai eu la chance de développer mes compétences numériques à travers de nombreux stages et expériences. Tel que mes 2 années passées en tant que responsable de la transition digitale pour le marché français au sein de l'entreprise, Royal Brinkman. Au cours de cette expérience j'ai appris à maîtriser le <strong>SEO</strong>, le <strong>SEA</strong> ainsi que l'email marketing à l'aide de différents outils tels que <strong>Mailchimp</strong>, Hotjar, <strong>Adwords</strong>, <strong>Google Analytics</strong>, ou encore ahrefs. Le tout avec Joomla pour CMS.",
             textColor: "#234A5D"
           },
-          sectionImage: '',
+          sectionImage: chartmarketing,
           ctaText: 'Découvrez mes projets',
           link: 'projets',
           color: '#D1DDE5',
