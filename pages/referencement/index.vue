@@ -22,7 +22,7 @@
 
     .section-sm.secondary.flex-column.white--text
       v-container
-        TextHeader(:blabla="{title: 'Mes certifications', teaser: 'Et leurs notations pas du tout exagéré et souvent approuvé par 100 personnes'}" side="center" :color="true")
+        TextHeader(:blabla="{title: 'Mes certifications', teaser: 'Et leur logo grisé pour des questions de design'}" side="center" :color="true")
         br
         .d-flex.flex-wrap.justify-center.certif-list
           .col-md-3.col-sm-6.col-12.d-flex.justify-center.align-center.certif-logo(v-for="certif in certifications")
@@ -43,16 +43,16 @@ export default {
     return {
       BannerBlabla: {
         title: "Marketeur digital",
-        teaser: "Du SEO au SEA en passant par du marketing de contenu",
-        text: "Détenteur d'un bachelor de l'école de commerce, Kedge Business School me voilà embauché par l'entre Royal Brinkman pour assurer la transition digital dans une entreprise veillissante."
+        teaser: "Du référencement naturel au payant en passant par du marketing de contenu",
+        text: "Diplomé de l'école de commerce Kedge Business School après 3 années dont une entière passée en stage dans le domaine du marketing digital. Me voilà employé par l'entreprise Royal Brinkman pour assurer la transition digital d'une entreprise veillissante. Au cours de cette période j'y apprend le référencement aussi bien naturel que payant mais aussi le marketing de contenu et l'email marketing."
       },
       ctaText: "Découvrez mes projets",
       link: "/projets",
       image: img,
       steps: [
-        {id: 1, image: 'magnifier', name: "Réalisation d'un audit technique", desc: "Détection des points d'attentions et optimisations"}, 
-        {id: 2, image: 'noutbook', name: "Amélioration des points définis", desc: "Modification et optimisation des points d'attentions"},
-        {id: 3, image: 'dashboard', name: "Analyse de l'impact des modifications", desc: "Mise en place d'un différentiel avant après"}
+        {id: 1, image: 'magnifier', name: "Réalisation d'un audit technique", desc: "Détection des points d'attentions et optimisations possibles"}, 
+        {id: 2, image: 'noutbook', name: "Amélioration des points définis", desc: "Mise en place des actions d'options des points d'attentions"},
+        {id: 3, image: 'dashboard', name: "Analyse de l'impact", desc: "Création d'un différentiel des performances avant après"}
       ],
       textHeader: {
         title: "Mes clients",

@@ -3,7 +3,7 @@
     .d-flex
       Banner(:blabla='BannerBlabla', :image="image" :ctaText="ctaText" :link="link")
     .section-sm.primary.flex-column.white--text
-      TextHeader(:blabla="{title: 'Mes réalisations', teaser: 'Du site vitrine au backoffice de gestion en passant par des applications web (PWA)'}" side="center" :white="true")
+      TextHeader(:blabla="blabla" side="center" :white="true")
       .d-flex.flex-wrap.justify-center.col-10.center-middle
         v-flex.col-10.col-lg-6.mb-12(v-for="item in items" :key='item.title')
           ProjectCard(:project="item")
@@ -12,8 +12,8 @@
         .col-sm-6.col-12.d-flex.justify-center.align-center
           v-img(:src="contactImg")
         .col-sm-6.col-12
-          h2 Alors convaincus par mon profil ?
-          span Prenez contact et échangons sur votre projet.
+          h2 Alors convaincu par mon profil ?
+          span Prenez contact et échangons sur la réalisation de votre projet, son coût et ses délais.
           CTA(v-if="ctaText && link" :className="true" color="accent" :text="ctaText" :link="link")
       nuxt-child
 </template>
@@ -33,8 +33,11 @@ export default {
     return {
       BannerBlabla: {
         title: "Mes réalisations",
-        teaser: "Du site vitrine au backoffice de gestion en passant par des applications web (PWA)",
-        text: "En décembre 2019, suite à 3 mois de bootcamp intensif à apprendre à coder, me voilà face à un choix draconien auquel tout développeur web est un jour confronté, plutôt front ou plutôt back ? Après des jours à tergiverser, je me décide... le Javascript parce que oui avec lui on peut faire les deux mais aussi et surtout créer des applications web toujours plus animées."
+        teaser: "Du site vitrine à l\'application de gestion en passant par des applications PWA",
+        text: "Equipé de ma stack front-end et back-end (ou fullstack) je développe des sites vitrines (sans gestion de contenu), blogs (avec gestion de contenu) ou encore des applications de gestion (commande, stock, facturation) le tout adapté aux différents format d'écran : mobile, tablette, écran. J'ai récemment développé une applications web progressives pour offrir une experience mobile similaire à celle d'une application mobile sans les contraintes de cette dernière."
+      },
+      blabla: {
+        title: "Mes réalisations"
       },
       ctaText: "Prenons contact",
       link: "/contact",
@@ -42,7 +45,7 @@ export default {
       contactImg: contactImg,
       items: {
         reflexosteo: {
-          title: 'REFLEX OSTEO',
+          title: 'REFLEXOSTEO',
           teaser: 'Site de mise en relation entre ostéopathe et patient',
           desc: "Les besoins a moyen termes étaient les suivants :<ul><li>Implémentations d'un système de temoignage sur les articles de blog, la plus grande source de trafic.</li> <li>Création d'un hug de blog qui était jusque la hébergé sur wordpress. <li>Optimisations techniques SEO</li> <li>Renforcement de l'automatisation des process du backoffice.</li><li>Representation des statistiques essentielle à la gestion quotidienne de l'entreprise.</li> <li>Création d'un hug de blog qui était jusque la hébergé sur wordpress. <li>Optimisations techniques SEO</li> <li>Renforcement de l'automatisation des process du backoffice.</li><li>Optimisation du parcours client.</li></ul>",
           solution: "Totalisant jusqu'ici 4 mois de travail, j'ai pu réaliser la plupart des besoins initiaux de Reflex Osteo avec : <ul><li>l'implementation de commentaires sur des articles de blog</li> <li>La création d'un hub blog avec système de recherche et structure d'article par tags </li> <li>Amélioration des performances sur mobile</li> <li>Système de mise en avant des meilleurs ostéopathes en fonction de leurs recommandations</li> <li>Mise en place de téléconsultation d'un système de téléconsultation</li> <li>Envoi automatique de mail lors de différent évenement, reception de paiement, activation du compte ostéopathe etc...</li> <li>Conformités au RGPD </li> <li>Résolution de différents bugs </li>",
@@ -121,7 +124,7 @@ export default {
           ]
         },
         thomaskrief: {
-          title: 'THOMAS KRIEF',
+          title: 'THOMASKRIEF',
           teaser: "Site vitrine de l'ancien skieur freestyle français : Thomas Krief",
           desc: "Projet de création d'un site vitrine pour l'ancien skieur professionnel et nouvel artiste : Thomas Krief. <br><br>L'objectif rechercher mettre en avant ses dernières créations et inviter les visiteurs à se rediriger vers son compte Artmajeur pour acceder à toute sa collection, ses prix.",
           solution: "Un site vitrine détaillant son parcours d'athlète accompli à l'artiste en reconversion. <br><br>Les oeuvres qu'il a choisi sont alors exposées par l'intermédiaire d'un carousel offrant la possibilté de se diriger vers un site e-commerce pour artiste (ArtMajeur).Là sont exposés tous ses oeuvres, les caractéristiques associés mais aussi et surtout le prix. <br><br>Un lien vers ses réseaux sociaux des plus entretenus sont également suggérés car Thomas dispose d'une grande communauté de par son passé.",

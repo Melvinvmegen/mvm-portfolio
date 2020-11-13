@@ -17,9 +17,9 @@ export default {
   data() {
     return {
       BannerBlabla: {
-        title: "Hello, on discute ?",
-        teaser: "Vous avez des questions ?",
-        text: "Sed nec magna sed augue tempor iaculis a in sapien. Aenean dapibus felis enim, vel efficitur dui posuere at. Donec purus odio, posuere nec posuere sit amet, commodo ut erat."
+        title: "Alors, on discute ?",
+        teaser: "Vous souhaitez prendre contact ou faire évaluer votre projet ?",
+        text: "Remplissez le formulaire ci-joint, exposer moi vos problématiques à résoudre ou projet à réaliser et je vous répondrai très bientôt."
       },
       image: img,
       ctaText: "Ou contactez-moi sur Malt",

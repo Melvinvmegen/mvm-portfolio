@@ -28,7 +28,7 @@ export default {
         title: "Une solution à tous vos projets web",
         teaser: "Du front au back en passant par du SEO",
         text:
-          "Développeur Web passionné, je suis constamment à la recherche d'améliorations, que ce soit à des fins personnelles ou professionnelles. Dans un monde poussé par l'innovation, la lecture quotidienne et la curiosité semblent obligatoires mais, pour moi c'est inné. J'ai toujours aimé plonger au plus profond des sujets qui me passionnent."
+          "Moi c'est Melvin, 24 ans, développeur Web passionné et constamment à la recherche d'améliorations, que ce soit à des fins personnelles ou professionnelles. Dans un monde poussé par l'innovation, la lecture quotidienne et la curiosité semblent obligatoires mais, pour moi c'est inné. J'ai toujours aimé plonger au plus profond des sujets qui me passionnent."
       },
       ctaText: "Découvrez mes projets",
       link: "/projets",
@@ -39,12 +39,12 @@ export default {
             id: 1,
             title: 'DEVELOPPEUR FRONT-END',
             subtitle: 'Vue.js, React.js, Freelance',
-            text: "Au cours de ma première expérience professionnelle en tant de marketer digital, j'ai pu suivre de multiples cours sur les languages suivants : HTML, CSS,  mais aussi Javascript. Et ainsi étendre mes compétences digitale. Certifié du Wagon après deux mois de bootcamp, j'ai décider d'étendre de compléter mes bases en <strong>Javascript</strong>. Language à l'aide duquel je me suis spécialisé dans le front-end avec pour framework : <strong>React.js</strong>. Dans la continuité et au vu d'une opportunité professionelle j'en suis venu à découvrir et favoriser le framework <strong>Vue.js</strong>",
+            text: "Au cours de ma première expérience professionnelle en tant de marketeur digital, j'ai eu la chance de suivre de multiples formations sur le web sans rentrer dans le côté technique. Seulement voilà après quelques mois je me retrouve fréquemment confronté à des barrières techniques et je décide alors d'étendre mes compétences digitale. Certifié du Wagon après trois mois de bootcamp, j'enchaine avec des cours sur Udemy pour compléter mes bases en <strong>Javascript</strong>. Language à l'aide duquel je me spécialise dans le front-end avec pour framework : <strong>React.js</strong>. Dans la continuité et au vu d'une opportunité professionelle j'en suis venu à découvrir et favoriser le framework <strong>Vue.js</strong> pour sa facilité de prise en main.",
             textColor: "#D1DDE5"
           },
           sectionImage: computerFront,
-          ctaText: 'Découvrez mes projets',
-          link: 'projets',
+          ctaText: 'Découvrez mon profil front-end',
+          link: 'frontEnd',
           color: '#234A5D',
           reverse: false
         },
@@ -53,12 +53,12 @@ export default {
             id: 2,
             title: 'DEVELOPPEUR BACK-END',
             subtitle: 'Ruby on Rails, Freelance',
-            text: "Certifié du Wagon après un bootcamp de deux mois, où j'ai pu élargir mes compétences par un language supplémentaire, <strong>Ruby</strong> et son framework, <strong>Rails</strong>. Le Wagon m'a également initié à la gestion de base de données relationnelle avec son language SQL et des outils tel que <strong>PostgreSQL</strong>. Je travail actuellement en collaboration avec une agence web spécialisée sur rails (Studio HB) qui m'a énormément fait progresser dans la structure de mon code, des bonnes pratiques à suivre et cela m'a aussi fait prendre conscience des notions de sécurité et de performance.",
+            text: "Certifié du Wagon après trois mois de bootcamp, où j'ai pu enrichir mes compétences web avec un language supplémentaire, <strong>Ruby</strong> et son framework, <strong>Rails</strong>. Le Wagon m'a également initié à la gestion de base de données relationnelle avec son language SQL et des outils tel que <strong>PostgreSQL</strong>. Je travail actuellement en collaboration avec une agence web spécialisée sur rails (Studio HB) qui m'a énormément fait progresser dans la structure de mon code, m'a appris les bonnes pratiques à suivre et m'a aussi fait prendre conscience des notions de sécurité et de performance.",
             textColor: "#234A5D"
           },
           sectionImage: computerBack,
-          ctaText: 'Découvrez mes projets',
-          link: 'projets',
+          ctaText: 'Découvrez mon profil back-end',
+          link: 'backEnd',
           color: '#fff',
           reverse: true
         },
@@ -67,12 +67,12 @@ export default {
             id: 3, 
             title: 'MARKETEUR DIGITAL',
             subtitle: 'Bachelor, spécialisation Marketing', 
-            text: "Etudes réalisées à Kedge Business School où j'ai eu la chance de développer mes compétences numériques à travers de nombreux stages et expériences. Tel que mes 2 années passées en tant que responsable de la transition digitale pour le marché français au sein de l'entreprise, Royal Brinkman. Au cours de cette expérience j'ai appris à maîtriser le <strong>SEO</strong>, le <strong>SEA</strong> ainsi que l'email marketing à l'aide de différents outils tels que <strong>Mailchimp</strong>, Hotjar, <strong>Adwords</strong>, <strong>Google Analytics</strong>, ou encore ahrefs. Le tout avec Joomla pour CMS.",
+            text: "Diplômé de Kedge Business School après 3 ans de formations où je me suis spécialisé dans le marketing digital. Au cours de ces 3 années, j'ai pu étendre mes compétences numériques à travers de nombreux stages et expériences. Une fois diplomé j'ai passé 2 années en tant que responsable de la transition digitale pour le département français au sein de l'entreprise, Royal Brinkman. Au cours de cette expérience j'ai appris à maîtriser le <strong>SEO</strong>, le <strong>SEA</strong> ainsi que l'email marketing à l'aide de différents outils tels que <strong>Mailchimp</strong>, Hotjar, <strong>Adwords</strong>, <strong>Google Analytics</strong>, ou encore semrush et ahrefs. Le tout avec Joomla pour CMS.",
             textColor: "#234A5D"
           },
-          sectionImage: chartmarketing,
-          ctaText: 'Découvrez mes projets',
-          link: 'projets',
+          sectionImage: chartmarketing,,
+          ctaText: 'Découvrez mon profil',
+          link: 'referencement',
           color: '#D1DDE5',
           reverse: false
         }
