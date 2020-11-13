@@ -1,6 +1,6 @@
 <template lang="pug">
   nuxt-link(:to="{ name: 'projets-name', params: { name: project.title, project: project }}")
-    v-img.project-img(:src="require(`~/assets/projects/${project.img}`)" :alt="project.alt" :href="project.href" data-aos="zoom-in" data-aos-once="true")
+    v-img.project-img(:src="require(`~/assets/projects/${project.alt}/${project.img}`)" :alt="project.alt" :href="project.href" data-aos="zoom-in" data-aos-once="true")
       .img-text
         h2.title-project {{ project.title }}
         p.teaser-project {{ project.teaser }}
@@ -75,10 +75,9 @@ export default {
   .title-project {
     font-size: 30px;
     text-decoration: none;
-    line-height: 2.5;
+    line-height: 2;
     font-weight: 800;
     text-align: center;
-    padding-right: 13%;
     color: #D1DDE6;
   }
 </style>

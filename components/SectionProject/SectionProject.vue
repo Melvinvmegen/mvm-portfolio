@@ -12,11 +12,11 @@
 
 <script>
 import CarouselContent from './CarouselContent/CarouselContent'
-import Mindseed from '~/assets/projects/mindseed.png'
-import ThomasKrief from '~/assets/projects/thomaskrief.png'
-import SecuryGard from '~/assets/projects/Securygard.png'
-import ReflexOsteo from '~/assets/projects/Reflex_osteo.png'
-import TimePass from '~/assets/projects/Timepass.png'
+import Mindseed from '~/assets/projects/mindseed/mindseed.png'
+import ThomasKrief from '~/assets/projects/thomaskrief/thomaskrief.png'
+import SecuryGard from '~/assets/projects/Securygard/Securygard.png'
+import ReflexOsteo from '~/assets/projects/reflexosteo/Reflex_osteo.png'
+import TimePass from '~/assets/projects/timepass/Timepass.png'
 import ProjectCard from '~/components/ProjectCard/ProjectCard'
 
 export default {
