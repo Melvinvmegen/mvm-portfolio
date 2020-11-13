@@ -49,7 +49,7 @@ export default {
           description: "1er semaine du wagon et initiation à la programmation côté serveur. Les bases de Ruby sont abordés ainsi que les premieres notions tel que les variables, les arrays, puis progressivement les methodes etc..."
         },
         { 
-          title: "Javier 2020",
+          title: "Janvier 2020",
           description: "Après la formation je décide de revoir les principes que j'avais le moins compris, les bases de données et leur language SQL. Grâce à active record, PostgreSQL et pas mal de pratique ces notions me sont beaucoup plus abordables et lisibles qu'au départ. Pour approfondir un peu le sujet je m'empart d'un cours sur Udemy reprennant les bases jusqu'à un usage de PostGreSQL pour un data scientist"
         },
         { 
