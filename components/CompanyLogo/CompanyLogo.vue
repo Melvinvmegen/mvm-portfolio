@@ -1,5 +1,5 @@
 <template lang="pug">
-  .col-md-4.col-sm-6.col-12.company-logo(:key="company.name")
+  .col-md-4.col-sm-6.col-12.company-logo
     img.company-logo(:src="require(`~/assets/companies/${company.src}`)" :alt="company.name")
 </template>
 
