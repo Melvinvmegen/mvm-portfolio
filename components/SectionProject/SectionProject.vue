@@ -112,49 +112,6 @@ export default {
             { id: 6, name: 'PostGreSQL' },
             { id: 7, name: 'Heroku' }
           ]
-        },
-        thomaskrief: {
-          title: 'THOMASKRIEF',
-          teaser: "Site vitrine de l'ancien skieur freestyle français : Thomas Krief",
-          desc: "Projet de création d'un site vitrine pour l'ancien skieur professionnel et nouvel artiste : Thomas Krief. <br><br>L'objectif rechercher mettre en avant ses dernières créations et inviter les visiteurs à se rediriger vers son compte Artmajeur pour acceder à toute sa collection, ses prix.",
-          solution: "Un site vitrine détaillant son parcours d'athlète accompli à l'artiste en reconversion. <br><br>Les oeuvres qu'il a choisi sont alors exposées par l'intermédiaire d'un carousel offrant la possibilté de se diriger vers un site e-commerce pour artiste (ArtMajeur).Là sont exposés tous ses oeuvres, les caractéristiques associés mais aussi et surtout le prix. <br><br>Un lien vers ses réseaux sociaux des plus entretenus sont également suggérés car Thomas dispose d'une grande communauté de par son passé.",
-          img: 'thomaskrief.png',
-          notebook: 'noutbooktk.png',
-          alt: 'thomaskrief',
-          href: 'http://www.thomaskrief.fr/',
-          projectImages: [
-            {img: 'www-thomaskrief-com', text: "Intégralité du site vitrine Thomaskrief.com"}, 
-          ],
-          btnText: '► Se rendre sur le site',
-          tags: [
-            { id: 1, name: 'HTML5' },
-            { id: 2, name: 'CSS3' },
-            { id: 3, name: 'Javascript' },
-            { id: 4, name: 'React.js' },
-            { id: 5, name: 'Netlify' }
-          ]
-        },
-        mindseed: {
-          title: 'MINDSEED',
-          teaser: 'MindSeed est une application d’apprentissage regroupant des méthodes issues de la recherche en sciences cognitives',
-          desc: "Projet de deux semaines réalisé au cours du Bootcamp proposé par la formation de développeur web Full-Stack, le Wagon. La problématique ? 80% de l'apprentissage classique est oublié après seulement une semaine. L'approche ? Apprendre aux utilisateurs à apprendre en créant une application proposant une expérience suffisamment attractive et structurée pour donner aux étudiants envie d'apprendre differemment.",
-          solution: "Une application web offrant la possibilité de structurer ses cours à la manière d'un mindmap. <br><br>Une fois les cours structurés en différentes parties et sous parties, l'utilisateur à la possibilité d'importer un jeu de carte existant ou de créer lui même un jeu de carte en quelques clics (un clic sur un mot suggère une définition adapté grâce à un call API), questions réponses. <br><br>Une fois le jeu de carte créé une jeune pousse représentant la connaissance de l'utilisateur est ajouté à sa carte de connaissance. <br><br>Celui-ci est alors proposé à l'utilisateur pour tester ses connaissances, à l'issu du test la plante est arrosée puis grandit tel une connaissance qui se développe. <br><br>Lorsque l'utilisateur se reconnecte sur l'application, un jeu de carte lui est automatiquement suggéré afin qu'il puisse litéralement entretenir ses connaissances. <br><br>Et le cycle se répète et les connaissances des utilisateurs s'enrichissent.", 
-          img: 'mindseed.png',
-          notebook: 'noutbookmindseed.png',
-          alt: 'mindseed',
-          href: 'https://www.mindseed.app/',
-          projectImages: [
-            {img: 'mindseed1', text: "Screen intégral de la homepage, le reste du contenu étant encore tenu secret.."}, 
-          ],
-          btnText: '► Se rendre sur le site',
-          tags: [
-            { id: 1, name: 'HTML5' },
-            { id: 2, name: 'CSS3' },
-            { id: 3, name: 'Javascript' },
-            { id: 6, name: 'Ruby' },
-            { id: 7, name: 'Ruby on Rails' },
-            { id: 9, name: 'Heroku' }
-          ]
         }
       }
     }
