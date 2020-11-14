@@ -20,7 +20,7 @@
         TextHeader(:blabla="textHeader" side="center" :color="true")
         .col-lg-8.col-11.logo-list
           .d-flex.flex-wrap
-            CompanyLogo(v-for="company in companies" :company="company")
+            CompanyLogo(v-for="company in companies" :company="company" :key="company.name")
 </template>
 
 <script>
