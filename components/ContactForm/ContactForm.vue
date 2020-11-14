@@ -180,6 +180,13 @@ export default {
   }
 }
 
+@media only screen and (max-width: 530px) {
+  .contact-img {
+    top: -3vh !important;
+    width: 200px !important;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .contact-container {
     bottom: -50vh;
@@ -187,13 +194,14 @@ export default {
   }
 
   .contact-img {
-    top: -2vh !important;
+    top: 1vh !important;
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 471px) {
   .contact-img {
-    width: 180px;
+    width: 190px !important;
+    top: -3vh !important;
   }
 }
 
