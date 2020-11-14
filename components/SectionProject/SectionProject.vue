@@ -39,7 +39,7 @@ export default {
           teaser: 'Site de mise en relation entre ostéopathe et patient',
           desc: "Site de mise en relation entre ostéopathe et patient. Totalisant jusqu'ici 4 mois de travail avec différentes missions, tel que l'implementation de commentaires sur des articles de blog, la création d'un hub blog avec système de recherche (auparavant wordpress), l'amélioration des performances sur mobile, un système de mise en avant des meilleurs ostéopathes en fonction de leurs recommandations, mise en place de téléconsultation et bien d'autres...",
           img: 'Reflex_osteo.png',
-          alt: 'REFLEX OSTEO',
+          alt: 'reflexosteo',
           href: 'https://www.reflexosteo.com/',
           btnText: '► Se rendre sur le site',
           tags: [
@@ -57,7 +57,7 @@ export default {
           teaser: "Site de mise en relation entre expert et personnes ayant besoin d'aide dans un domaine spécifique",
           desc: "Site de mise en relation entre expert et personnes ayant besoin d'aide dans un domaine spécifique. Mise en place d'un système de chat à l'attribution d'une mission, d'un système de recherche d'expert par tags, gestion de l'affection et de l'échange de la monnaie virtuelle : le tpass et implémentation de la charte graphique.",
           img: 'Timepass.png',
-          alt: 'Time Pass',
+          alt: 'timepass',
           href: 'https://timepasse.herokuapp.com/',
           btnText: '► Se rendre sur le site',
           tags: [
@@ -75,7 +75,7 @@ export default {
           teaser: 'SecuryGard, entreprise de sécurité située à Valence',
           desc: "Projet de création d'une application Web de gestion de base de données clients avec partage de documents sécurisés entre administrateurs et utilisateurs, création dynamique de contrats (format pdf) et distribution et remplissage d'enquête clients. Création et mise en place de la charte graphique.",
           img: 'Securygard.png',
-          alt: 'SECURYGARD',
+          alt: 'Securygard',
           href: 'https://serene-falls-79228.herokuapp.com/',
           btnText: '► Se rendre sur le site',
           tags: [
