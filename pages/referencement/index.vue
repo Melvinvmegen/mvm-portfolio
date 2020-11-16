@@ -9,6 +9,7 @@
       .d-flex.flex-wrap.container
         .block.col-md-4.col-sm-12(v-for="step in steps" :key="step.id" :class="{'text-center': $vuetify.breakpoint.smAndDown}")
           img.step-img(:src="require(`~/assets/referencement/${step.image}.png`)")
+          br
           h3.d-flex(:class="{'align-center justify-center': $vuetify.breakpoint.smAndDown}")
             strong.surrounded-text.mr-2 {{ step.id }}
             | {{ step.name }}
@@ -18,7 +19,58 @@
       v-container
         TextHeader(:blabla="parcoursHeader" side="center" :color="true")
         br
-        
+        .d-flex.col-10.parcours.parcours
+          .d-flex.flex-column.col-2
+            h3 2014
+          .d-flex.flex-column.col-8
+            .d-flex.flex-column 
+              div 
+                h4 Programme Bachelor 
+              div KEDGE BUSINESS SCHOOL
+              span (Oct 14 / Mai 16)
+            br
+            hr
+            br
+        .d-flex.col-10.parcours   
+          .d-flex.flex-column.col-2
+            h3 2016
+          .d-flex.flex-column.col-8 
+            .d-flex.flex-column 
+              div 
+                h4 Stage Marketing Digital 
+              div DESKBOOKERS
+              span (Jan 16 / Mai 16) 
+            br
+            hr
+            br     
+            .d-flex.flex-column 
+              div 
+                h4 Programme Bachelor (spécialisation marketing)
+              div KEDGE BUSINESS SCHOOL
+              span (Oct 16 / Mai 17) 
+            br
+            hr
+            br
+        .d-flex.col-10.parcours
+          .d-flex.flex-column.col-2
+            h3 2017
+          .d-flex.flex-column.col-8      
+            .d-flex.flex-column 
+              div 
+                h4 Stage Marketing Digital 
+              div ROYAL BRINKMAN
+              span (Jan 17 / Juin 17)
+            br
+            hr
+            br     
+            .d-flex.flex-column 
+              div 
+                h4 E-marketer spécialiste France 
+              div ROYAL BRINKMAN
+              span (Juil 17 / Sept 19)
+        .d-flex.col-10.parcours  
+          .d-flex.flex-column.col-2
+            h3 2019
 
     .section-sm.secondary.flex-column.white--text
       v-container
@@ -99,6 +151,10 @@ export default {
   max-height: 100px;
   margin: auto;
   display: block;
+}
+
+.parcours {
+  margin: 0 auto;
 }
 
 .surrounded-text {
