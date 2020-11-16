@@ -189,7 +189,7 @@ export default {
 
 @media only screen and (max-width: 500px) {
   .contact-container {
-    bottom: -50vh;
+    bottom: 18vh;
     padding: 40px !important;
   }
 
@@ -201,13 +201,37 @@ export default {
 @media only screen and (max-width: 471px) {
   .contact-img {
     width: 190px !important;
-    top: -3vh !important;
+    top: -12vh !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-container {
+    bottom: 11vh !important;
+  }
+  .contact-img {
+    width: 170px;
+    top: -5vh !important;
   }
 }
 
 @media only screen and (max-width: 370px) {
+  .contact-container {
+    bottom: 0 !important;
+  }
   .contact-img {
     width: 170px;
+    top: 6vh !important;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .contact-container {
+    bottom: 4vh !important;
+  }
+  .contact-img {
+    width: 170px;
+    top: 3vh !important;
   }
 }
 </style>

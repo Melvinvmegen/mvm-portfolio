@@ -107,4 +107,16 @@ export default {
       flex: 0 0 100%;
     }
   }
+
+  @media only screen and (max-width: 370px) {
+    .footer {
+      height: 839px !important;
+    }
+  }
+
+  @media only screen and (max-width: 340px) {
+    .footer {
+      height: 855px !important;
+    }
+  }
 </style>

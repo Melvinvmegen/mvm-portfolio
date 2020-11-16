@@ -22,9 +22,13 @@ export default {
         text: "Remplissez le formulaire ci-joint, exposer moi vos problématiques à résoudre ou projet à réaliser et je vous répondrai très bientôt."
       },
       image: img,
-      ctaText: "Ou contactez-moi sur Malt",
       link: "https://www.malt.fr/profile/melvinvanmegen",
     };
+  },
+  computed: {
+    ctaText() {
+      return this.$vuetify.breakpoint.smAndDown ? "Ou sur malt" : "Ou contactez-moi sur Malt"
+    }
   }
 };
 </script>
@@ -36,7 +40,7 @@ export default {
   display: flex;
   position: relative;
   padding: 0;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 100px);
   min-height: 900px;
 }
 
@@ -78,10 +82,6 @@ export default {
 }
 
 @media only screen and (max-width: 960px) {
-  .section-home {
-    height: 100% !important;
-  }
-
   .header {
     margin: 0 !important;
   }
