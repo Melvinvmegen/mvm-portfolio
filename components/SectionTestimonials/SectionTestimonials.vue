@@ -120,6 +120,13 @@ export default {
     }
   }
 
+  @media (max-width: 400px) {
+    .section-main-testimonials {
+      min-height: 900px;
+    }
+  }
+
+
   @media (max-width: 375px) {
     .section-title {
       margin-bottom: 0 !important;

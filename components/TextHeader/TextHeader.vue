@@ -60,4 +60,18 @@ export default {
   h3 {
     color: #D1DCDF
   }
+
+  @media only screen and (max-width: 350px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h1.side-center:after {
+    margin: 0.5rem auto 0.5rem;
+  }
+
+  h1.side-right:after {
+    margin: 0.5rem auto 0.5rem;
+  }
+}
 </style>

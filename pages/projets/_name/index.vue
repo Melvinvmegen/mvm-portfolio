@@ -7,7 +7,7 @@
       .pb-15.pt-15
         h2.subheader Le projet...
         span(v-html='desc')
-    .section.secondary.align-start
+    .secondary.align-start
       v-container
         .pb-15.pt-15
           h2.subheader La solution...

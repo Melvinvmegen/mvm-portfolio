@@ -136,13 +136,25 @@ export default {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .header {
-    max-height: 70vh !important;
+    max-height: 65vh !important;
+    margin: auto;
   }
 
   .header-height {
-    max-height: 30vh !important;
+    max-height: 35vh !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header {
+    max-height: 60vh !important;
+    margin: auto;
+  }
+
+  .header-height {
+    max-height: 40vh !important;
   }
 }
 </style>

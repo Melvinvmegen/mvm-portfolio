@@ -36,8 +36,17 @@ export default {
 </script>
 
 <style>
+  html {
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+  }
+
   body {
     font-family: Montserrat,BuenosAires,sans-serif;
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
   }
 
   .v-application {
